@@ -39,6 +39,7 @@ const votingError = (error) => {
 };
 
 const voteUpLoaded = (data) => {
+    console.log(data)
     return {
         type: 'VOTE_UP_SUCCESS',
         payload: data
@@ -46,6 +47,7 @@ const voteUpLoaded = (data) => {
 };
 
 const voteDownLoaded = (data) => {
+    console.log(data)
     return {
         type: 'VOTE_DOWN_SUCCESS',
         payload: data
@@ -70,7 +72,7 @@ export const voteUp = (service, dispatch) => (id) => {
 export const voteDown = (service, dispatch) => (id) => {
     dispatch(votingRequested());
     service.fetchVoting(id, 0)
-      .then((data) => dispatch(voteDownLoaded(data)))
+      .then(() => dispatch(voteDownLoaded(id)))
       .then(() => fetchImage(service, dispatch))
       .catch((err) => dispatch(votingError(err)));
 }
@@ -117,19 +119,17 @@ const getFavouriteLoaded = (data) => {
 };
 
 export const addFavourite = (service, dispatch) => (id) => {
-    console.log('add');
     dispatch(favouriteRequested());
     service.addFavourite(id)
-      .then((data) => dispatch(addFavouriteLoaded(data)))
+      .then(() => dispatch(addFavouriteLoaded(id)))
       .then(() => getFavourite(service, dispatch)())
       .catch((err) => dispatch(favouriteError(err)));
 }
 
-export const deleteFavourite = (service, dispatch) => (id) => {
-    console.log('delete');
+export const deleteFavourite = (service, dispatch) => (id, imgId) => {
     dispatch(favouriteRequested());
     service.deleteFavourite(id)
-      .then((data) => dispatch(deleteFavouriteLoaded(data)))
+      .then(() => dispatch(deleteFavouriteLoaded(imgId)))
       .then(() => getFavourite(service, dispatch)())
       .catch((err) => dispatch(favouriteError(err)));
 }

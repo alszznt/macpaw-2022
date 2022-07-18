@@ -19,29 +19,29 @@ class VotesButtons extends Component {
 
     render() {
 
-        const { id, url, voteUp, voteDown, addFavourite, deleteFavourite, favouriteList } = this.props;
+        const { id, url, voteUp, voteDown, addFavourite, deleteFavourite, favouriteList, actionsLog } = this.props;
 
         let isFav = favouriteList.find(el => el.image_id === id);
-        console.log(isFav);
+
 
         return(
             <div>
                 <img src = { url } alt = { id } className = "image"/>
-                <div onClick = { () => voteUp(id, 1) }> vote up </div>
+                <div onClick = { () => voteUp(id) }> vote up </div>
                 { !isFav ? 
-                <div onClick = { () => addFavourite( id ) }> vote fav </div> :
-                <div onClick = { () => deleteFavourite( isFav.id ) } style = {{color: 'red'}}> vote fav </div>
+                    <div onClick = { () => addFavourite( id ) }> vote fav </div> :
+                    <div onClick = { () => deleteFavourite( isFav.id, id ) } style = {{color: 'red'}}> del fav </div>
                 }
                 
-                <div onClick = { () => voteDown(id, 0) }> vote down </div>
+                <div onClick = { () => voteDown(id) }> vote down </div>
             </div>
         )
     }
 
 }
 
-const mapStateToProps = ({ imagesData: { id, url }, favouriteData: { favouriteList } }) => {
-    return { id, url, favouriteList };
+const mapStateToProps = ({ imagesData: { id, url }, votingFavData: { favouriteData: { favouriteList }, actionsLog } }) => {
+    return { id, url, favouriteList, actionsLog };
 };
 
 const mapDispatchToProps = (dispatch, { catService }) => {
@@ -52,7 +52,7 @@ const mapDispatchToProps = (dispatch, { catService }) => {
         getVotes: (limit, order, page) => getVotes(catService, dispatch)(limit, order, page),
         getFavourite: (limit, order, page) => getFavourite(catService, dispatch)(limit, order, page),
         addFavourite: (id) => addFavourite(catService, dispatch)(id),
-        deleteFavourite: (id) => deleteFavourite(catService, dispatch)(id),
+        deleteFavourite: (id, imgId) => deleteFavourite(catService, dispatch)(id, imgId),
     };
 };
 
