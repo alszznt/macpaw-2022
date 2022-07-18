@@ -18,7 +18,7 @@ const updateFavouriteData = (state, action) => {
           error: null
         };
 
-    case 'FAVOURITE_SUCCESS':
+    case 'GET_FAVOURITE_SUCCESS':
     return {
         ...state.favouriteData,
         favouriteList: action.payload,
@@ -32,6 +32,20 @@ const updateFavouriteData = (state, action) => {
         favouriteList: [],
         loading: false,
         error: action.payload
+    };
+
+    case 'ADD_FAVOURITE_SUCCESS':
+    return {
+      ...state.favouriteData,
+      loading: false,
+      error: null
+    };
+
+    case 'DELETE_FAVOURITE_SUCCESS':
+    return {
+      ...state.favouriteData,
+      loading: false,
+      error: null
     };
         
       default:

@@ -59,10 +59,34 @@ export default class CatService {
                 sub_id: this._subId
             })
         }
-        const res = await this.getResource(`/favourites/`, head)
+        const res = await this.getResource(`/favourites`, head)
         return res;
     }
 
-    
+    deleteFavourite = async (id) => {
+        const head = {
+            method: 'DELETE',
+            headers: {
+                'x-api-key': 'c91f4c8b-f7c1-4cee-9461-2f27f43bc610',
+                'Content-Type' : 'application/json',
+            }
+        }
+        const res = await this.getResource(`/favourites/${ id }`, head)
+        return res;
+    }
+
+    getFavourite = async (limit, order = 'DESC', page = 0) => {
+        const head = {
+            method: 'GET',
+            headers: {
+                'x-api-key': 'c91f4c8b-f7c1-4cee-9461-2f27f43bc610',
+                'Content-Type' : 'application/json',
+            }
+        }
+        const res = await this.getResource(`/favourites?order=${ order }&limit=${ limit }&page=${ page }`, head)
+        return res;
+    }
+
+
 
 }

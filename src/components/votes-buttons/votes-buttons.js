@@ -4,45 +4,55 @@ import { connect } from 'react-redux';
 import { withCatService } from '../hoc';
 import { compose } from '../../utils';
 
-import { fetchImage, fetchVote, getVotes } from '../../actions';
+import { fetchImage, voteUp, voteDown, getVotes, addFavourite, getFavourite, deleteFavourite } from '../../actions';
 
 import './votes-buttons.css';
 
 class VotesButtons extends Component {
 
     componentDidMount() {
-        const { fetchImage, getVotes } = this.props;
+        const { fetchImage, getVotes, getFavourite } = this.props;
         fetchImage();
         getVotes();
+        getFavourite(25, 'DESC', 0);
     }
 
     render() {
 
-        const { id, url, votingList, fetchVote, getVotes } = this.props;
+        const { id, url, voteUp, voteDown, addFavourite, deleteFavourite, favouriteList } = this.props;
 
-        console.log(votingList);
+        let isFav = favouriteList.find(el => el.image_id === id);
+        console.log(isFav);
 
         return(
             <div>
                 <img src = { url } alt = { id } className = "image"/>
-                <div onClick = { () => fetchVote(id, 1) }> vote up </div>
-                <div onClick = { () => getVotes() }> vote fav </div>
-                <div onClick = { () => fetchVote(id, 0) }> vote down </div>
+                <div onClick = { () => voteUp(id, 1) }> vote up </div>
+                { !isFav ? 
+                <div onClick = { () => addFavourite( id ) }> vote fav </div> :
+                <div onClick = { () => deleteFavourite( isFav.id ) } style = {{color: 'red'}}> vote fav </div>
+                }
+                
+                <div onClick = { () => voteDown(id, 0) }> vote down </div>
             </div>
         )
     }
 
 }
 
-const mapStateToProps = ({ votingData: { id, url, votingList } }) => {
-    return { id, url, votingList };
+const mapStateToProps = ({ imagesData: { id, url }, favouriteData: { favouriteList } }) => {
+    return { id, url, favouriteList };
 };
 
 const mapDispatchToProps = (dispatch, { catService }) => {
     return {
         fetchImage: () => fetchImage(catService, dispatch),
-        fetchVote: (id, val) => fetchVote(catService, dispatch)(id, val),
-        getVotes: (limit, order, page) => getVotes(catService, dispatch)(limit, order, page)
+        voteUp: (id) => voteUp(catService, dispatch)(id),
+        voteDown: (id) => voteDown(catService, dispatch)(id),
+        getVotes: (limit, order, page) => getVotes(catService, dispatch)(limit, order, page),
+        getFavourite: (limit, order, page) => getFavourite(catService, dispatch)(limit, order, page),
+        addFavourite: (id) => addFavourite(catService, dispatch)(id),
+        deleteFavourite: (id) => deleteFavourite(catService, dispatch)(id),
     };
 };
 
