@@ -1,7 +1,7 @@
 export default class CatService {
 
     _apiBase = 'https://api.thecatapi.com/v1';
-    _user = 'user-123'
+    _subId = 'user-solomakha';
 
     getResource = async (url, head) => {
         const res = await fetch(`${this._apiBase}${url}`, head);
@@ -25,16 +25,44 @@ export default class CatService {
                 'x-api-key': 'c91f4c8b-f7c1-4cee-9461-2f27f43bc610',
                 'Content-Type' : 'application/json',
             },
-            body: {
+            body: JSON.stringify({
                 image_id: id, 
-                sub_id: this._user,
+                sub_id: this._subId,
                 value: val
-            }
+            })
         }
-        console.log(head);
         const res = await this.getResource(`/votes`, head)
         return res;
-
     }
+
+    getVotes = async (limit = 10, order = 'DESC', page = 0) => {
+        const head = {
+            method: 'GET',
+            headers: {
+                'x-api-key': 'c91f4c8b-f7c1-4cee-9461-2f27f43bc610',
+                'Content-Type' : 'application/json',
+            }
+        }
+        const res = await this.getResource(`/votes?order=${ order }&limit=${ limit }&page=${ page }`, head)
+        return res;
+    }
+
+    addFavourite = async (id) => {
+        const head = {
+            method: 'POST',
+            headers: {
+                'x-api-key': 'c91f4c8b-f7c1-4cee-9461-2f27f43bc610',
+                'Content-Type' : 'application/json',
+            },
+            body: JSON.stringify({
+                image_id: id, 
+                sub_id: this._subId
+            })
+        }
+        const res = await this.getResource(`/favourites/`, head)
+        return res;
+    }
+
+    
 
 }
