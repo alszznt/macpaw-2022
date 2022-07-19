@@ -1,12 +1,17 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import './app-navigation-button.css';
 
 const AppNavigationButton = ({ image, label, link, bg }) => {
+
+    const location = useLocation();
+
+    let isActive = location.pathname === link ? 'active' : '';
+
     return(
-        <Link to = { link } className = "app-navigation-button">
+        <Link to = { link } className = {`app-navigation-button ${ isActive }`}>
             <div className = "app-navigation-button-background" style={{ backgroundColor: bg }}>
                 <img 
                     src = { image } 

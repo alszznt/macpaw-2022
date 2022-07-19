@@ -1,3 +1,84 @@
-.image{
-    height: 400px;
+.votes-buttons{
+    width: max-content;
+    margin: -40px auto 0;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    outline: 4px solid rgba(255, 255, 255, 1);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 4px;
+}
+
+.votes-buttons-80{
+    width: 80px;
+    height: 80px;
+    padding: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.votes-buttons-like{
+    background-color: #97EAB9;
+}
+
+.votes-buttons-dislike{
+    background-color: #FFD280;
+}
+
+.votes-buttons-fav{
+    background-color: #FF868E;
+}
+
+.votes-buttons-like:hover{
+    background-color: #E0F9EA;
+}
+
+.votes-buttons-dislike:hover{
+    background-color: #FFF2D9;
+}
+
+.votes-buttons-fav:hover{
+    background-color: #FFDBDD;
+}
+
+.icon-30{
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.3s;
+}
+
+.like-icon-30-white{
+    background-image: url('../../assets/like-white-30.svg');
+}
+
+.dislike-icon-30-white{
+    background-image: url('../../assets/dislike-white-30.svg');
+}
+
+.fav-icon-30-white{
+    background-image: url('../../assets/fav-white-30.svg');
+}
+
+.fav-icon-30-full-white{
+    background-image: url('../../assets/fav-full-white-30.svg');
+}
+
+.votes-buttons-80:hover > .like-icon-30-white{
+    background-image: url('../../assets/like-color-30.svg');
+}
+
+.votes-buttons-80:hover > .dislike-icon-30-white{
+    background-image: url('../../assets/dislike-color-30.svg');
+}
+
+.votes-buttons-80:hover > .fav-icon-30-white{
+    background-image: url('../../assets/fav-30.svg');
+}
+
+.votes-buttons-80:hover > .fav-icon-30-full-white{
+    background-image: url('../../assets/fav-color-30.svg');
 }

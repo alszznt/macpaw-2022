@@ -64,3 +64,21 @@
     background-color: #FF868E;
     color: #FFFFFF;
 }
+
+.active:hover > .app-navigation-button-background{
+    border: 4px solid rgba(251, 224, 220, 1);
+}
+
+.active:hover > .app-navigation-button-label{
+    background-color: #FF868E;
+    color: #FFFFFF;
+}
+
+.active > .app-navigation-button-background{
+    border: 4px solid rgba(251, 224, 220, 1);
+}
+
+.active > .app-navigation-button-label{
+    background-color: #FF868E;
+    color: #FFFFFF;
+}

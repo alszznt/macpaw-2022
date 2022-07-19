@@ -1,0 +1,78 @@
+.search-breeds-input{
+    width: 100%;
+    height: 60px;
+    display: grid;
+    grid-template-columns: auto 40px;
+    grid-gap: 0 10px;
+    background-color: #FFFFFF;
+    align-items: center;
+    padding: 0 10px 0 0;
+    border-radius: 20px;
+    overflow: hidden;
+    outline: 2px solid rgba(255, 255, 255, 1);
+    transition: 0.3s;
+}
+
+.search-breeds-input:hover {
+    outline: 2px solid rgba(251, 224, 220, 1);
+}
+
+.search-breeds-input:focus-within{
+    outline: 2px solid rgba(255, 134, 142, 1) !important;
+}
+
+.search-breeds-input-value{
+    width: 100%;
+    height: 100%;
+    padding: 15px 0 15px 20px;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #1D1D1D;
+    border: 0;
+    outline: none;
+}
+
+.search-breeds-input-value::placeholder{
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #8C8C8C;
+}
+
+.search-breeds-input-icon-button{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-color: #FBE0DC;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-breeds-input-icon-button:hover{
+    background-color: #FF868E;
+}
+
+.search-breeds-input-icon{
+    width: 20px;
+    height: 20px;
+    background-image: url(../../assets/search-20.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.3s;
+}
+
+.search-breeds-input-icon-button:hover > .search-breeds-input-icon{
+    background-image: url(../../assets/search-white-20.svg);
+}
+
+.search-breeds-input-value:active{
+    border: 0;
+    outline: none;
+}
