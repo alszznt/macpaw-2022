@@ -1,11 +1,15 @@
+import updateActionsLog from './actions-log';
 import updateImagesData from './images-data';
-import updateVotingFavData from './voting-favourite-data';
+import updateVotingData from './voting-data';
+import updateFavouriteData from './favourite-data'
 import updateBreedsData from './breeds-data';
 
 const reducer = (state, action) => {
   return {
+    actionsLog: updateActionsLog(state, action),
     imagesData: updateImagesData(state, action),
-    votingFavData: updateVotingFavData(state, action),
+    votingData: updateVotingData(state, action),
+    favouriteData: updateFavouriteData(state, action),
     breedsData: updateBreedsData(state, action)
   };
 };

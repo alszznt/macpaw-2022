@@ -23,6 +23,7 @@ class VotesButtons extends Component {
 
         let isFav = favouriteList.find(el => el.image_id === id);
 
+        console.log(actionsLog);
 
         return(
             <div>
@@ -32,7 +33,6 @@ class VotesButtons extends Component {
                     <div onClick = { () => addFavourite( id ) }> vote fav </div> :
                     <div onClick = { () => deleteFavourite( isFav.id, id ) } style = {{color: 'red'}}> del fav </div>
                 }
-                
                 <div onClick = { () => voteDown(id) }> vote down </div>
             </div>
         )
@@ -40,7 +40,7 @@ class VotesButtons extends Component {
 
 }
 
-const mapStateToProps = ({ imagesData: { id, url }, votingFavData: { favouriteData: { favouriteList }, actionsLog } }) => {
+const mapStateToProps = ({ imagesData: { id, url }, favouriteData: { favouriteList }, actionsLog }) => {
     return { id, url, favouriteList, actionsLog };
 };
 

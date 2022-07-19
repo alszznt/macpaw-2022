@@ -1,3 +1,43 @@
+const getDate = () => {
+    let dt = new Date();
+    if (dt.getMinutes() < 10) {
+        return `${ dt.getHours() }:0${ dt.getMinutes() }`
+    }
+    return `${ dt.getHours() }:${ dt.getMinutes() }`
+}
+
+const addLikeLog = (id) => {
+    const data = { id: id, time: getDate() }
+    return {
+        type: 'ADD_LIKE_LOG',
+        payload: data
+    };
+};
+
+const addDislikeLog = (id) => {
+    const data = { id: id, time: getDate() }
+    return {
+        type: 'ADD_DISLIKE_LOG',
+        payload: data
+    };
+};
+
+const addFavouriteLog = (id) => {
+    const data = { id: id, time: getDate() }
+    return {
+        type: 'ADD_FAVOURITE_LOG',
+        payload: data
+    };
+};
+
+const deleteFavouriteLog = (id) => {
+    const data = { id: id, time: getDate() }
+    return {
+        type: 'DELETE_FAVOURITE_LOG',
+        payload: data
+    };
+};
+
 const imageRequested = () => {
     return {
       type: 'FETCH_IMAGE_REQUEST'
@@ -62,14 +102,16 @@ const getVotesLoaded = (data) => {
 };
 
 export const voteUp = (service, dispatch) => (id) => {
+    dispatch(addLikeLog(id));
     dispatch(votingRequested());
     service.fetchVoting(id, 1)
-      .then(() => dispatch(voteUpLoaded(id)))
+      .then((data) => dispatch(voteUpLoaded(id)) )
       .then(() => fetchImage(service, dispatch))
       .catch((err) => dispatch(votingError(err)));
 }
 
 export const voteDown = (service, dispatch) => (id) => {
+    dispatch(addDislikeLog(id));
     dispatch(votingRequested());
     service.fetchVoting(id, 0)
       .then(() => dispatch(voteDownLoaded(id)))
@@ -119,6 +161,7 @@ const getFavouriteLoaded = (data) => {
 };
 
 export const addFavourite = (service, dispatch) => (id) => {
+    dispatch(addFavouriteLog(id));
     dispatch(favouriteRequested());
     service.addFavourite(id)
       .then(() => dispatch(addFavouriteLoaded(id)))
@@ -127,6 +170,7 @@ export const addFavourite = (service, dispatch) => (id) => {
 }
 
 export const deleteFavourite = (service, dispatch) => (id, imgId) => {
+    dispatch(deleteFavouriteLog(imgId));
     dispatch(favouriteRequested());
     service.deleteFavourite(id)
       .then(() => dispatch(deleteFavouriteLoaded(imgId)))
