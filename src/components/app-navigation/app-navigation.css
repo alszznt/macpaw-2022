@@ -1,0 +1,58 @@
+.app-navigation{
+    padding: 30px;
+    position: sticky;
+    top: 30px;
+}
+
+.app-navigation-content-container{
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.app-logo{
+    display: block; 
+    width: max-content;
+    height: 24px;
+    margin: 0;
+}
+
+.app-navigation-content{
+    margin: 80px 0 0;
+}
+
+.app-navigation-title{
+    font-family: 'Jost', sans-serif;
+    font-size: 44px;
+    color: #1D1D1D;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 58px;
+}
+
+.app-navigation-subtitle{
+    margin: 10px 0 0;
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    color: #8C8C8C;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+}
+
+.app-navigation-buttons-title{
+    margin: 60px 0 0;
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    color: #1D1D1D;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 29px;
+}
+
+.app-navigation-buttons-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 16px;
+    margin: 20px 0 0;
+}

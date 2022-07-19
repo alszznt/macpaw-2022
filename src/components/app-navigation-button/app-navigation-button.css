@@ -1,0 +1,66 @@
+.app-navigation-button{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-columns: auto;
+    grid-gap: 10px 0;
+    width: 140px;
+    height: 246px;
+    cursor: pointer;
+}
+
+.app-navigation-button-background{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid rgba(255, 255, 255, 0.6);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    transition: 0.3s;
+    padding: 4px;
+}
+
+.app-navigation-button-illustration{
+    position: absolute;
+    height: 100%;
+}
+
+.app-navigation-button-label{
+    height: 36px;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #FF868E;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.app-navigation-button:hover > .app-navigation-button-background{
+    border: 4px solid rgba(255, 255, 255, 1);
+}
+
+.app-navigation-button:hover > .app-navigation-button-label{
+    background-color: #FBE0DC;
+    color: #FF868E;
+}
+
+.app-navigation-button:active > .app-navigation-button-background{
+    border: 4px solid rgba(251, 224, 220, 1);
+}
+
+.app-navigation-button:active > .app-navigation-button-label{
+    background-color: #FF868E;
+    color: #FFFFFF;
+}
