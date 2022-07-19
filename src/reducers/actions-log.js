@@ -10,22 +10,22 @@ const updateActionsLog = (state, action) => {
   
         case 'ADD_LIKE_LOG':
             return {
-                logs: [ { data: action.payload, categoty: 'Likes', action: 'add' }, ...state.actionsLog.logs ]
+                logs: [ { data: action.payload, category: 'Likes', action: 'added to' }, ...state.actionsLog.logs ]
             };
   
         case 'ADD_DISLIKE_LOG':
             return {
-                logs: [ { data: action.payload, categoty: 'Dislikes', action: 'add' }, ...state.actionsLog.logs ]
+                logs: [ { data: action.payload, category: 'Dislikes', action: 'added to' }, ...state.actionsLog.logs ]
             };
   
         case 'ADD_FAVOURITE_LOG':
             return {
-                logs: [ { data: action.payload, categoty: 'Favourites', action: 'add' }, ...state.actionsLog.logs ]
+                logs: [ { data: action.payload, category: 'Favourites', action: 'added to' }, ...state.actionsLog.logs ]
             };
 
         case 'DELETE_FAVOURITE_LOG':
             return {
-                logs: [ { data: action.payload, categoty: 'Favourites', action: 'delete' }, ...state.actionsLog.logs ]
+                logs: [ { data: action.payload, category: 'Favourites', action: 'removed from' }, ...state.actionsLog.logs ]
             };
         
       default:

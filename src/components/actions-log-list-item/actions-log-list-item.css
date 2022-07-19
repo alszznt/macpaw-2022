@@ -1,0 +1,54 @@
+.actions-log-list-item{
+    background-color: #F8F8F7;
+    width: 100%;
+    display: grid;
+    grid-template-columns: max-content auto 20px;
+    padding: 15px 20px 15px 15px;
+    grid-gap: 0 20px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.actions-log-list-item-date{
+    font-family: 'Jost', sans-serif;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 3px 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1D1D1D;
+}
+
+.actions-log-list-item-label{
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8C8C8C;
+}
+
+.actions-log-list-item-label-bolt{
+    font-weight: 500;
+    color: #1D1D1D;
+}
+
+.like-icon-color-20{
+    background-image: url('../../assets/like-color-20.svg');
+    width: 20px;
+    height: 20px;
+}
+
+.dislike-icon-color-20{
+    background-image: url('../../assets/dislike-color-20.svg');
+    width: 20px;
+    height: 20px;
+}
+
+.fav-icon-20{
+    background-image: url('../../assets/fav-20.svg');
+    width: 20px;
+    height: 20px;
+}

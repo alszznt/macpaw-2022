@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Route, Routes } from 'react-router-dom';
 
-import { HomePage, VotingPage, BreedsPage, GalleryPage } from '../pages';
+import { HomePage, VotingPage, BreedsPage, GalleryPage, LikesPage, DislikesPage, FavouritesPage } from '../pages';
 
 import './app.css';
 
@@ -32,17 +32,17 @@ const App = () => {
 
             <Route
                 path="/likes"
-                element={<VotingPage />}
+                element={<LikesPage />}
             />
 
             <Route
                 path="/dislikes"
-                element={<VotingPage />}
+                element={<DislikesPage />}
             />
 
             <Route
                 path="/favourites"
-                element={<VotingPage />}
+                element={<FavouritesPage />}
             />
 
         </Routes>
