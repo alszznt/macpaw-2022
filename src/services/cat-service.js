@@ -18,6 +18,11 @@ export default class CatService {
         return res;
     }
 
+    getImageById = async (id) => {
+        const res = await this.getResource(`/images/${ id }`)
+        return res;
+    }
+
     fetchVoting = async (id, val) => {
         const head = {
             method: 'POST',

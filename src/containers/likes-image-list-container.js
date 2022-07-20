@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import ImageList from '../components/image-list';
+import { LikesImageListItem } from '../containers';
 
 import { connect } from 'react-redux';
 import { withCatService } from '../components/hoc';
@@ -38,22 +39,11 @@ class LikesImageListContainer extends Component {
         return (
             <ImageList 
                 list = { votingList }
-                Item = { ImageListItem }
+                Item = { LikesImageListItem }
             />
         )
     }
 
-}
-
-const ImageListItem = ({ props }) => {
-
-    console.log(props);
-
-    return(
-        <div className = "image-list-item">
-
-        </div>
-    )
 }
 
 const mapStateToProps = ({ votingData: { votingList, loading, error } }) => {
