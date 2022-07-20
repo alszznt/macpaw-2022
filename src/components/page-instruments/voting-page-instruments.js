@@ -6,14 +6,14 @@ import BackButton from '../back-button';
 
 import { VotingImage, VotesButtons, ActionsLogList } from '../../containers';
 
-import './voting-page-instruments.css';
+import './page-instruments.css';
 
 const VotingPageInstruments = () => {
     return(
-        <div className = "voting-page-instruments">
+        <div className = "page-instruments-layout">
             <InstrumentsHeader />
-            <div className = "voting-page-content">
-                <div className = "voting-page-instruments-header">
+            <div className = "page-instruments-content">
+                <div className = "page-instruments-header">
                     <BackButton />
                     <InstrumentsLebel value = 'VOTING' />
                 </div>

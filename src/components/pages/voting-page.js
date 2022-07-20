@@ -1,7 +1,7 @@
 import React from 'react';
 
 import AppNavigation from '../app-navigation';
-import VotingPageInstruments from '../voting-page-instruments';
+import { VotingPageInstruments } from '../page-instruments';
 
 const VotingPage = () => {
     return(
