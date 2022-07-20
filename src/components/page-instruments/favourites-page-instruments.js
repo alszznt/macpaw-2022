@@ -10,19 +10,19 @@ import { VotesImageList } from '../../containers';
 
 import './page-instruments.css';
 
-const LikesPageInstruments = () => {
+const FavouritesPageInstruments = () => {
     return(
         <div className = "page-instruments-layout">
             <InstrumentsHeader />
             <div className = "page-instruments-content">
                 <div className = "page-instruments-header">
                     <BackButton />
-                    <InstrumentsLebel value = 'LIKES' />
+                    <InstrumentsLebel value = 'FAVOURITES' />
                 </div>
-                <VotesImageList Item = { LikesImageListItem } />
+                
             </div>
         </div>
     )
 };
 
-export default LikesPageInstruments;
+export default FavouritesPageInstruments;

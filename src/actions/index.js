@@ -119,9 +119,9 @@ export const voteDown = (service, dispatch) => (id) => {
       .catch((err) => dispatch(votingError(err)));
 }
 
-export const getVotes = (service, dispatch) => () => {
+export const getVotes = (service, dispatch) => (limit, order, page) => {
     dispatch(votingRequested());
-    service.getVotes()
+    service.getVotes(limit, order, page)
       .then((data) => dispatch(getVotesLoaded(data)))
       .catch((err) => dispatch(votingError(err)));
 }

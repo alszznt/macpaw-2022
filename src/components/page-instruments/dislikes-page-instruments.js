@@ -4,25 +4,25 @@ import InstrumentsHeader from '../instruments-header';
 import InstrumentsLebel from '../instruments-lebel';
 import BackButton from '../back-button';
 
-import { LikesImageListItem } from '../../containers';
+import { DislikesImageListItem } from '../../containers';
 
 import { VotesImageList } from '../../containers';
 
 import './page-instruments.css';
 
-const LikesPageInstruments = () => {
+const DislikesPageInstruments = () => {
     return(
         <div className = "page-instruments-layout">
             <InstrumentsHeader />
             <div className = "page-instruments-content">
                 <div className = "page-instruments-header">
                     <BackButton />
-                    <InstrumentsLebel value = 'LIKES' />
+                    <InstrumentsLebel value = 'DISLIKES' />
                 </div>
-                <VotesImageList Item = { LikesImageListItem } />
+                <VotesImageList Item = { DislikesImageListItem } />
             </div>
         </div>
     )
 };
 
-export default LikesPageInstruments;
+export default DislikesPageInstruments;

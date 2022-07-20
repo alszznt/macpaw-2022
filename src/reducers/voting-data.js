@@ -2,9 +2,9 @@ const updateVotingFavData = (state, action) => {
 
   if (state === undefined) {
     return {
-      votingList: {},
+      votingList: [],
       loading: true,
-      error: null
+      error: null,
     };
   }
 
@@ -13,7 +13,7 @@ const updateVotingFavData = (state, action) => {
     case 'VOTING_REQUEST':
       return {
         ...state.votingData,
-        votingList: {},
+        votingList: [],
         loading: true,
         error: null
       };
@@ -21,7 +21,7 @@ const updateVotingFavData = (state, action) => {
     case 'VOTING_FAILURE':
       return {
         ...state.votingData,
-        votingList: {},
+        votingList: [],
         loading: false,
         error: action.payload
       };
@@ -47,7 +47,6 @@ const updateVotingFavData = (state, action) => {
         loading: false,
         error: null
       };
-
       
     default:
       return state.votingData;

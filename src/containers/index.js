@@ -1,13 +1,15 @@
 import VotingImage from './voting-image-container';
 import VotesButtons from './votes-buttons-container';
 import ActionsLogList from './actions-log-list-container';
-import LikesImageList from './likes-image-list-container';
-import LikesImageListItem from './likes-image-list-item-container'
+import VotesImageList from './votes-image-list-container';
+import LikesImageListItem from './likes-image-list-item-container';
+import DislikesImageListItem from './dislikes-image-list-item-container';
 
 export { 
     VotingImage,
     VotesButtons,
     ActionsLogList,
-    LikesImageList,
-    LikesImageListItem
+    VotesImageList,
+    LikesImageListItem,
+    DislikesImageListItem
 }

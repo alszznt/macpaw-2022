@@ -2,7 +2,7 @@
     width: 100%;
     height: 100%;
     display: flex;
-    background: #FBE0DC;
+    background: #F8F8F7;
     border-radius: 20px;
     align-items: center;
     justify-content: center;
@@ -11,7 +11,7 @@
 .loading-icon-30-animeted{
     width: 30px;
     height: 30px;
-    background-image: url('../../assets/loading-16.png');
+    background-image: url('../../assets/loading-16-gray.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,4 +28,26 @@
     to {
         transform:rotate(-360deg);
     }
+}
+
+.element-loading-indicator{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.element-loading-indicator-icon{
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    background-image: url(../../assets/loading-16-gray.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: spin;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
 }

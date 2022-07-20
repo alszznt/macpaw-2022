@@ -1,31 +1,29 @@
 import React, { Component } from 'react';
 
 import ImageList from '../components/image-list';
-import { LikesImageListItem } from '../containers';
 
 import { connect } from 'react-redux';
 import { withCatService } from '../components/hoc';
 import { compose } from '../utils';
 
+import { ElementLoadingIndicator } from '../components/loading-indicators';
+import { ListNoResultIndicator } from '../components/error-indicators';
+
 import { getVotes } from '../actions';
 
-class LikesImageListContainer extends Component {
+class VotesImageListContainer extends Component {
 
     componentDidMount() {
         const { getVotes } = this.props;
-        getVotes(10, 'DESC', 0);
+        getVotes(25, 'DESC', 0);
     }
 
     render() {
         
-        const { votingList, loading, error } = this.props;
+        const { votingList, loading, error, Item } = this.props;
 
         if (loading){
-            return(
-                <div>
-                    loading...
-                </div>
-            )
+            return <ElementLoadingIndicator />
         }
 
         if (error){
@@ -36,10 +34,14 @@ class LikesImageListContainer extends Component {
             )
         }
 
+        if (votingList.length === 0){
+            return <ListNoResultIndicator />
+        }
+
         return (
             <ImageList 
                 list = { votingList }
-                Item = { LikesImageListItem }
+                Item = { Item }
             />
         )
     }
@@ -59,4 +61,4 @@ const mapDispatchToProps = (dispatch, { catService }) => {
 export default compose(
     withCatService(),
     connect(mapStateToProps, mapDispatchToProps)
-)(LikesImageListContainer);
+)(VotesImageListContainer);

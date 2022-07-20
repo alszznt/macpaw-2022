@@ -8,7 +8,7 @@ import { compose } from '../utils';
 import { ImageLoadingIndicator } from '../components/loading-indicators';
 import { ImageErrorIndicator } from '../components/error-indicators';
 
-class LikesImageListItemContainer extends Component {
+class DislikesImageListItemContainer extends Component {
 
     state = {
         url: '',
@@ -48,7 +48,7 @@ class LikesImageListItemContainer extends Component {
         const { loading, error, url } = this.state;
         const { props } = this.props
 
-        if ( props.value === 0 ){
+        if ( props.value === 1 ){
             return null
         }
 
@@ -69,4 +69,4 @@ class LikesImageListItemContainer extends Component {
 
 export default compose(
     withCatService()
-)(LikesImageListItemContainer);
+)(DislikesImageListItemContainer);

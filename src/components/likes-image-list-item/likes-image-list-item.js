@@ -2,7 +2,7 @@ import React from 'react';
 
 import './likes-image-list-item.css';
 
-const LikesImageListItem = ({ props, url }) => {
+const LikesImageListItem = ({ url }) => {
 
     return(
         <div className = "likes-image-list-item">
