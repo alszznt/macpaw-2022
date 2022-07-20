@@ -1,0 +1,14 @@
+.instruments-lebel{
+    padding: 5px 30px;
+    width: max-content;
+    background: #FF868E;
+    border-radius: 10px;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}

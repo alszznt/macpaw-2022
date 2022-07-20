@@ -12,6 +12,10 @@ class ActionsLogListContainer extends Component {
 
         const { logs } = this.props;
 
+        if (logs.length === 0){
+            return null;
+        }
+
         return(
             <ActionsLogList logs = { logs } />
         );
