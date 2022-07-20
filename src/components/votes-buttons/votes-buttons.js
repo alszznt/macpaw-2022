@@ -34,7 +34,7 @@ const VotesButtons = ({ id, favouriteList, voteUp, voteDown, addFavourite, delet
                     className = "votes-buttons-80 votes-buttons-dislike"> 
                     <div className = "icon-30 dislike-icon-30-white" />
                 </div>
-            </div>
+        </div>
     )
 }
 

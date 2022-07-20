@@ -6,7 +6,16 @@ import { connect } from 'react-redux';
 import { withCatService } from '../components/hoc';
 import { compose } from '../utils';
 
-import { voteUp, voteDown, getVotes, addFavourite, getFavourite, deleteFavourite } from '../actions';
+import { 
+    voteUp, 
+    voteDown, 
+    getVotes, 
+    addFavourite, 
+    getFavourite, 
+    deleteFavourite 
+} from '../actions';
+
+import { VotesButtonsLoadingIndicator } from '../components/loading-indicators';
 
 class VotesButtonsContainer extends Component {
 
@@ -18,14 +27,20 @@ class VotesButtonsContainer extends Component {
 
     render() {
 
-        const { id, voteUp, voteDown, addFavourite, deleteFavourite, favouriteList } = this.props;
+        const { id, voteUp, voteDown, addFavourite, deleteFavourite, favouriteData, votingData } = this.props;
 
-        
+        if ( votingData.loading ){
+            return <VotesButtonsLoadingIndicator />
+        }
+
+        if ( favouriteData.loading ){
+            return <VotesButtonsLoadingIndicator />
+        }
 
         return (
             <VotesButtons 
                 id = { id }
-                favouriteList = { favouriteList }
+                favouriteList = { favouriteData.favouriteList }
                 voteUp = { voteUp }
                 voteDown = { voteDown }
                 addFavourite = { addFavourite }
@@ -36,8 +51,8 @@ class VotesButtonsContainer extends Component {
 
 }
 
-const mapStateToProps = ({ imagesData: { id }, favouriteData: { favouriteList } }) => {
-    return { id, favouriteList };
+const mapStateToProps = ({ imagesData: { id }, favouriteData, votingData }) => {
+    return { id, favouriteData, votingData };
 };
 
 const mapDispatchToProps = (dispatch, { catService }) => {

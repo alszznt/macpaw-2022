@@ -79,7 +79,6 @@ const votingError = (error) => {
 };
 
 const voteUpLoaded = (data) => {
-    console.log(data)
     return {
         type: 'VOTE_UP_SUCCESS',
         payload: data
@@ -87,7 +86,6 @@ const voteUpLoaded = (data) => {
 };
 
 const voteDownLoaded = (data) => {
-    console.log(data)
     return {
         type: 'VOTE_DOWN_SUCCESS',
         payload: data
@@ -102,8 +100,8 @@ const getVotesLoaded = (data) => {
 };
 
 export const voteUp = (service, dispatch) => (id) => {
-    dispatch(addLikeLog(id));
     dispatch(votingRequested());
+    dispatch(addLikeLog(id));
     service.fetchVoting(id, 1)
       .then((data) => dispatch(voteUpLoaded(id)) )
       .then(() => fetchImage(service, dispatch))
@@ -111,8 +109,8 @@ export const voteUp = (service, dispatch) => (id) => {
 }
 
 export const voteDown = (service, dispatch) => (id) => {
-    dispatch(addDislikeLog(id));
     dispatch(votingRequested());
+    dispatch(addDislikeLog(id));
     service.fetchVoting(id, 0)
       .then(() => dispatch(voteDownLoaded(id)))
       .then(() => fetchImage(service, dispatch))

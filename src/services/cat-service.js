@@ -1,7 +1,7 @@
 export default class CatService {
 
     _apiBase = 'https://api.thecatapi.com/v1';
-    _subId = 'user-solomakha';
+    _subId = 'user-1';
 
     getResource = async (url, head) => {
         const res = await fetch(`${this._apiBase}${url}`, head);
@@ -28,7 +28,7 @@ export default class CatService {
             method: 'POST',
             headers: {
                 'x-api-key': 'c91f4c8b-f7c1-4cee-9461-2f27f43bc610',
-                'Content-Type' : 'application/json',
+                'Content-Type' : 'application/json'
             },
             body: JSON.stringify({
                 image_id: id, 
@@ -45,7 +45,7 @@ export default class CatService {
             method: 'GET',
             headers: {
                 'x-api-key': 'c91f4c8b-f7c1-4cee-9461-2f27f43bc610',
-                'Content-Type' : 'application/json',
+                'Content-Type' : 'application/json'
             }
         }
         const res = await this.getResource(`/votes?order=${ order }&limit=${ limit }&page=${ page }`, head)

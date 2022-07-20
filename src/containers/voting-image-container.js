@@ -6,6 +6,8 @@ import { connect } from 'react-redux';
 import { withCatService } from '../components/hoc';
 import { compose } from '../utils';
 
+import { ImageLoadingIndicator } from '../components/loading-indicators';
+
 import { fetchImage } from '../actions';
 
 class VotingImageContainer extends Component {
@@ -17,7 +19,15 @@ class VotingImageContainer extends Component {
 
     render() {
 
-        const { id, url } = this.props;
+        const { id, url, loading, error } = this.props;
+
+        if (loading) {
+            return (
+                <div className = "voting-image">
+                    <ImageLoadingIndicator />
+                </div>
+            )
+        }
 
         return(
             <VotingImage id = { id } url = { url } />
@@ -26,8 +36,8 @@ class VotingImageContainer extends Component {
 
 }
 
-const mapStateToProps = ({ imagesData: { id, url } }) => {
-    return { id, url };
+const mapStateToProps = ({ imagesData: { id, url, loading, error } }) => {
+    return { id, url, loading, error };
 };
 
 const mapDispatchToProps = (dispatch, { catService }) => {

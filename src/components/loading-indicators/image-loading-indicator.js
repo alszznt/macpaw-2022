@@ -2,7 +2,7 @@ import React from 'react';
 
 import './loading-indicators.css';
 
-const ImageErrorIndicator = () => {
+const ImageLoadingIndicator = () => {
     return(
         <div className = "image-loading-indicator">
             <div className = "loading-icon-30-animeted"/>
@@ -10,4 +10,4 @@ const ImageErrorIndicator = () => {
     )
 }
 
-export default ImageErrorIndicator;
+export default ImageLoadingIndicator;

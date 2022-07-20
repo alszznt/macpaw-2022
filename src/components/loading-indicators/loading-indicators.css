@@ -51,3 +51,23 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear; 
 }
+
+.votes-buttons-like-loading{
+    background: #97EAB9;
+}
+
+.votes-buttons-fav-loading{
+    background: #FF868E;
+}
+
+.votes-buttons-dislike-loading{
+    background: #FFD280;
+}
+
+.loading-icon-30-white{
+    background-image: url('../../assets/loading-white-16.png');
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
