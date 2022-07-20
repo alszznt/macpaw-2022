@@ -11,19 +11,19 @@ import {
 
 import './page-instruments.css';
 
-const LikesPageInstruments = () => {
+const BreedsPageInstruments = () => {
     return(
         <div className = "page-instruments-layout">
             <InstrumentsHeader />
             <div className = "page-instruments-content">
                 <div className = "page-instruments-header">
                     <BackButton />
-                    <InstrumentsLebel value = 'LIKES' />
+                    <InstrumentsLebel value = 'BREEDS' />
                 </div>
-                <VotesImageList Item = { LikesImageListItem } />
+                {/* <VotesImageList Item = { LikesImageListItem } /> */}
             </div>
         </div>
     )
 };
 
-export default LikesPageInstruments;
+export default BreedsPageInstruments;

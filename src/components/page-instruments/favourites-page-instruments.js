@@ -4,9 +4,12 @@ import InstrumentsHeader from '../instruments-header';
 import InstrumentsLebel from '../instruments-lebel';
 import BackButton from '../back-button';
 
-import { LikesImageListItem } from '../../containers';
+import FavImageListItem from '../fav-image-list-item';
 
-import { VotesImageList } from '../../containers';
+import { 
+    FavImageList, 
+    ActionsLogList
+} from '../../containers';
 
 import './page-instruments.css';
 
@@ -19,7 +22,8 @@ const FavouritesPageInstruments = () => {
                     <BackButton />
                     <InstrumentsLebel value = 'FAVOURITES' />
                 </div>
-                
+                <FavImageList Item = { FavImageListItem } />
+                <ActionsLogList />
             </div>
         </div>
     )

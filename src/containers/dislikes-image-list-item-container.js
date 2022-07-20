@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import LikesImageListItem from '../components/likes-image-list-item';
+import VotesImageListItem from '../components/votes-image-list-item';
 
 import { withCatService } from '../components/hoc';
 import { compose } from '../utils';
@@ -61,7 +61,7 @@ class DislikesImageListItemContainer extends Component {
         }
 
         return(
-            <LikesImageListItem props = { props } url = { url } />
+            <VotesImageListItem props = { props } url = { url } />
         );
     }
 
