@@ -1,11 +1,11 @@
 import React from 'react';
 
-import './voting-image.css';
+import './cat-image.css';
 
-const VotingImage = ({ id, url }) => {
+const CatImage = ({ url }) => {
     return(
         <div style = {{ backgroundImage:` url(${url})`}} className = "voting-image"/>
     );
 };
 
-export default VotingImage;
+export default CatImage;

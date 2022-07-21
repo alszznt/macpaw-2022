@@ -4,6 +4,7 @@ const updateCatsData = (state, action) => {
       return {
         cats: [],
         selectedImage: {},
+        info: {},
         loading: true,
         error: null,
       };
@@ -11,43 +12,43 @@ const updateCatsData = (state, action) => {
   
     switch (action.type) {
   
-      case 'VOTING_REQUEST':
-        return {
-          ...state.votingData,
-          votingList: [],
-          loading: true,
-          error: null
-        };
-  
-      case 'VOTING_FAILURE':
-        return {
-          ...state.votingData,
-          votingList: [],
-          loading: false,
-          error: action.payload
-        };
-  
-      case 'VOTE_DOWN_SUCCESS':
+      case 'FETCH_CATS_DATA_REQUEST':
       return {
-        ...state.votingData,
+        ...state.catsData,
+        selectedImage: {},
+        info: {},
+        cats: [],
+        loading: true,
+        error: null
+      };
+
+    case 'FETCH_CATS_DATA_SUCCESS':
+      return {
+        ...state.catsData,
+        cats: action.payload,
         loading: false,
         error: null
       };
-  
-      case 'VOTE_UP_SUCCESS':
+
+    case 'FETCH_CATS_DATA_FAILURE':
       return {
-        ...state.votingData,
+        ...state.catsData,
+        cats: [],
         loading: false,
-        error: null
+        error: action.payload
       };
-  
-      case 'GET_VOTES_SUCCESS':
-        return {
-          ...state.votingData,
-          votingList: action.payload,
-          loading: false,
-          error: null
-        };
+
+    case 'ON_CAT_IMAGE_SELECTED':
+      return {
+        ...state.catsData,
+        selectedImage: action.payload
+      };
+
+    case 'GET_CAT_INFO':
+    return {
+      ...state.catsData,
+      info: action.payload
+    };
         
       default:
         return state.catsData;

@@ -15,7 +15,7 @@ class VotesImageListContainer extends Component {
 
     componentDidMount() {
         const { getVotes } = this.props;
-        getVotes(25, 'DESC', 0);
+        getVotes('', 'DESC', 0);
     }
 
     render() {

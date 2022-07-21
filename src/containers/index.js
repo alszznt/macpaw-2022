@@ -11,6 +11,9 @@ import BreedsLimitPicker from './breeds-limit-picker-container';
 import BreedsSortingZAButton from './breeds-sorting-za-button-container';
 import BreedsSortingAZButton from './breeds-sorting-az-button-container';
 import BreedsSwitchPageButtons from './breeds-switch-page-buttons-container';
+import CatsPageSliderButtons from './cats-page-slider-buttons-container';
+import CatImage from './cat-image-container';
+import CatInfo from './cat-info-container';
 
 export { 
     VotingImage,
@@ -25,5 +28,8 @@ export {
     BreedsLimitPicker,
     BreedsSortingZAButton,
     BreedsSortingAZButton,
-    BreedsSwitchPageButtons
+    BreedsSwitchPageButtons,
+    CatsPageSliderButtons,
+    CatImage,
+    CatInfo
 }

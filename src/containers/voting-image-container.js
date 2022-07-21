@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 
-import VotingImage from '../components/voting-image';
+import CatImage from '../components/cat-image';
 
 import { connect } from 'react-redux';
 import { withCatService } from '../components/hoc';
 import { compose } from '../utils';
 
 import { ImageLoadingIndicator } from '../components/loading-indicators';
+import { ImageErrorIndicator } from '../components/error-indicators';
 
 import { fetchImage } from '../actions';
 
@@ -29,8 +30,10 @@ class VotingImageContainer extends Component {
             )
         }
 
+        if (error) return <ImageErrorIndicator />
+
         return(
-            <VotingImage id = { id } url = { url } />
+            <CatImage id = { id } url = { url } />
         );
     }
 

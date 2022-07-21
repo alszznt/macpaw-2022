@@ -6,7 +6,7 @@ import BackButton from '../back-button';
 
 import { useParams } from 'react-router-dom';
 
-import {} from '../../containers';
+import { CatsPageSliderButtons, CatImage, CatInfo } from '../../containers';
 
 import './page-instruments.css';
 
@@ -23,6 +23,11 @@ const CatsPageInstruments = () => {
                     <InstrumentsLebel value = 'BREEDS' isActive = { false } />
                     <InstrumentsLebel value = { params.id }/>
                 </div>
+                <div className = "page-instruments-cats-images">
+                    <CatImage />
+                    <CatsPageSliderButtons />
+                </div>
+                <CatInfo />
             </div>
         </div>
     )

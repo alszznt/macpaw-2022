@@ -272,3 +272,47 @@ export const sortArr = (arr) => (selectedElement, limit, page, sort) => {
     }
 }
 
+const catsRequested = () => {
+    return {
+      type: 'FETCH_CATS_DATA_REQUEST'
+    }
+};
+
+const catsLoaded = (data, dispatch) => {
+    dispatch(getCatInfo(data[0].breeds[0]));
+    dispatch(onCatImageSelected(data[0]));
+    return {
+        type: 'FETCH_CATS_DATA_SUCCESS',
+        payload: data
+    };
+};
+
+const catsError = (error) => {
+    return {
+        type: 'FETCH_CATS_DATA_FAILURE',
+        payload: error
+    };
+};
+
+export const getCats = (service, dispatch) => (id) => {
+    dispatch(catsRequested());
+    service.getCatsImages(id)
+      .then((data) => dispatch(catsLoaded(data, dispatch)))
+      .catch((err) => dispatch(catsError(err)));
+};
+
+export const onCatImageSelected = (data) => {
+    return {
+        type: 'ON_CAT_IMAGE_SELECTED',
+        payload: data
+    };
+};
+
+export const getCatInfo = (data) => {
+    return {
+        type: 'GET_CAT_INFO',
+        payload: data
+    };
+};
+
+

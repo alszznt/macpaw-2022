@@ -1,0 +1,73 @@
+.cat-info{
+    margin: 5px 0 0 0;
+    position: relative;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.cat-info-name{
+    width: max-content;
+    margin: -31px auto 0 auto;
+    padding: 5px 40px;
+    position: absolute;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 52px;
+    color: #1D1D1D;
+    z-index: 200;
+}
+
+.cat-info-alt-name{
+    width: max-content;
+    margin: 0 auto;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    color: #8C8C8C;
+}
+
+.cat-info-general-conatiner{
+    padding: 30px 40px 40px;
+    display: grid;
+    grid-gap: 20px 0;
+    background: #FFFFFF;
+    border: 2px solid #FBE0DC;
+    border-radius: 20px;
+    z-index: 100;
+}
+
+.cat-info-general{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 20px;
+}
+
+.cat-info-general-right{
+    display: grid;
+    grid-gap: 10px 0;
+}
+
+.cat-info-bolt-text{
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: #1D1D1D;
+}
+
+.cat-info-text{
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #8C8C8C;
+}
