@@ -210,3 +210,10 @@ export const getBreeds = (service, dispatch) => {
       .then((data) => dispatch(getBreedsLoaded(data)))
       .catch((err) => dispatch(breedsError(err)));
 };
+
+export const selectBreed = (data) => {
+    return {
+        type: 'SELECT_BREED',
+        payload: data
+    };
+};

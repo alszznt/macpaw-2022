@@ -2,7 +2,9 @@ const updateBreedsData = (state, action) => {
 
   if (state === undefined) {
     return {
-      selectedBreed: 'all breeds',
+      selectedBreed: 'All breeds',
+      limit: 5,
+      sort: 'AZ',
       breeds: [],
       loading: true, 
       error: null
@@ -30,9 +32,15 @@ const updateBreedsData = (state, action) => {
     case 'FETCH_BREEDS_DATA_FAILURE':
       return {
         ...state.breedsData,
-        data: {},
+        breeds: [],
         loading: false,
         error: action.payload
+      };
+
+    case 'SELECT_BREED':
+      return {
+        ...state.breedsData,
+        selectedBreed: action.payload
       };
 
     default:

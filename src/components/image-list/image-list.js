@@ -9,7 +9,7 @@ const ImageList = ({ list, Item }) => {
         return (
             <Item 
                 props = { data }
-                key = { Math.floor(Math.random() * 1000) }
+                key = { data.id }
             />
         );
     });
