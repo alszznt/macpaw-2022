@@ -6,8 +6,6 @@ import './actions-log-list.css';
 
 const ActionsLogList = ({ logs }) => {
 
-    console.log(logs);
-
     const list = logs.map((data) => {
 
         return (

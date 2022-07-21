@@ -254,3 +254,21 @@ export const decBreedsPage = () => {
     };
 };
 
+export const sortArr = (arr) => (selectedElement, limit, page, sort) => {
+
+    let locArr = [...arr]
+    
+    let newArr;
+    sort === 'AZ' ? newArr = [...locArr] : newArr = [...locArr.reverse()];
+
+    if (selectedElement === 'All breeds'){
+        let lust;
+        limit * page >= newArr.length ? lust = newArr.length : lust = limit * page;
+        let first;
+        first = limit * ( page - 1 )
+        return [...newArr.slice(first, lust)];
+    }else{
+        return [...newArr.filter( (el) => el.name === selectedElement )]
+    }
+}
+

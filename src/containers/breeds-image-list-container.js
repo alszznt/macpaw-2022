@@ -7,11 +7,12 @@ import { withCatService } from '../components/hoc';
 import { compose } from '../utils';
 
 import { ElementLoadingIndicator } from '../components/loading-indicators';
-import { ListNoResultIndicator } from '../components/error-indicators';
+import { ListNoResultIndicator, ImageErrorIndicator } from '../components/error-indicators';
 
 import { 
     getBreeds, 
-    resetBreedsData 
+    resetBreedsData,
+    sortArr 
 } from '../actions';
 
 class BreedsImageListContainer extends Component {
@@ -26,27 +27,9 @@ class BreedsImageListContainer extends Component {
         resetBreedsData();
     }
 
-    sortArr = (arr) => (selectedElement, limit, page, sort) => {
-
-        let locArr = [...arr]
-        
-        let newArr;
-        sort === 'AZ' ? newArr = [...locArr] : newArr = [...locArr.reverse()];
-
-        if (selectedElement === 'All breeds'){
-            let lust;
-            limit * page >= newArr.length ? lust = newArr.length : lust = limit * page;
-            let first;
-            first = limit * ( page - 1 )
-            return [...newArr.slice(first, lust)];
-        }else{
-            return [...newArr.filter( (el) => el.name === selectedElement )]
-        }
-    }
-
     render() {
         
-        const { breeds, loading, error, Item, selectedBreed, limit, sort, page } = this.props;
+        const { breeds, loading, error, Item, selectedBreed, limit, sort, page, sortArr } = this.props;
 
         if (loading){
             return <ElementLoadingIndicator />
@@ -54,9 +37,7 @@ class BreedsImageListContainer extends Component {
 
         if (error){
             return(
-                <div>
-                    something went wrong :(
-                </div>
+                <ImageErrorIndicator/>
             )
         }
 
@@ -68,7 +49,7 @@ class BreedsImageListContainer extends Component {
 
         return (
             <ImageList 
-                list = { this.sortArr(breeds)(selectedBreed, limit, page, sort) }
+                list = { sortArr(breeds)(selectedBreed, limit, page, sort) }
                 Item = { Item }
             />
         )
@@ -83,7 +64,8 @@ const mapStateToProps = ({ breedsData: { breeds, loading, error, selectedBreed, 
 const mapDispatchToProps = (dispatch, { catService }) => {
     return {
         getBreeds: () => getBreeds(catService, dispatch),
-        resetBreedsData: () => dispatch(resetBreedsData())
+        resetBreedsData: () => dispatch(resetBreedsData()),
+        sortArr
     };
 };
 

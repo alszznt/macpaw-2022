@@ -8,20 +8,22 @@ import BreedsSwitchPageButtons from '../components/breeds-switch-page-buttons';
 
 import { 
     incBreedsPage,
-    decBreedsPage
+    decBreedsPage,
+    sortArr
 } from '../actions';
 
 class BreedsSwitchPageButtonsContainer extends Component {
 
     render() {
 
-        const { page, limit, breeds, incBreedsPage, decBreedsPage } = this.props;
+        const { page, limit, breeds, incBreedsPage, decBreedsPage, selectedBreed, sort, sortArr } = this.props;
 
         return (
             <BreedsSwitchPageButtons 
                 page = { page } 
                 limit = { limit } 
                 arr = { breeds } 
+                sortArr = { sortArr(breeds)(selectedBreed, limit, page, sort) }
                 incBreedsPage = { () => incBreedsPage() } 
                 decBreedsPage = { () => decBreedsPage() } 
             />
@@ -30,14 +32,15 @@ class BreedsSwitchPageButtonsContainer extends Component {
 
 }
 
-const mapStateToProps = ({ breedsData: { limit, page, breeds } }) => {
-    return { limit, page, breeds };
+const mapStateToProps = ({ breedsData: { limit, page, breeds, selectedBreed, sort } }) => {
+    return { limit, page, breeds, selectedBreed, sort };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
         incBreedsPage: () => dispatch(incBreedsPage()),
-        decBreedsPage: () => dispatch(decBreedsPage())
+        decBreedsPage: () => dispatch(decBreedsPage()),
+        sortArr
     };
 };
 
