@@ -3,12 +3,12 @@ import React from 'react';
 import InstrumentsHeader from '../instruments-header';
 import InstrumentsLebel from '../instruments-lebel';
 import BackButton from '../back-button';
-import BreedsPicker from '../breeds-picker';
 
 import BreedsImageListItem from '../breeds-image-list-item';
 
 import { 
-    BreedsImageList
+    BreedsImageList,
+    BreedsPicker
 } from '../../containers';
 
 import './page-instruments.css';
