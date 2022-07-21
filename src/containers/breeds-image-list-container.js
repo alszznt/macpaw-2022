@@ -9,13 +9,21 @@ import { compose } from '../utils';
 import { ElementLoadingIndicator } from '../components/loading-indicators';
 import { ListNoResultIndicator } from '../components/error-indicators';
 
-import { getBreeds } from '../actions';
+import { 
+    getBreeds, 
+    resetBreedsData 
+} from '../actions';
 
 class BreedsImageListContainer extends Component {
 
     componentDidMount() {
         const { getBreeds } = this.props;
         getBreeds();
+    }
+
+    componentWillUnmount(){
+        const { resetBreedsData } = this.props;
+        resetBreedsData();
     }
 
     render() {
@@ -54,7 +62,8 @@ const mapStateToProps = ({ breedsData: { breeds, loading, error } }) => {
 
 const mapDispatchToProps = (dispatch, { catService }) => {
     return {
-        getBreeds: () => getBreeds(catService, dispatch)
+        getBreeds: () => getBreeds(catService, dispatch),
+        resetBreedsData: () => dispatch(resetBreedsData())
     };
 };
 

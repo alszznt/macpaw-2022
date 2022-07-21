@@ -43,6 +43,34 @@ const updateBreedsData = (state, action) => {
         selectedBreed: action.payload
       };
 
+    case 'SELECT_BREEDS_LIMIT':
+      return {
+        ...state.breedsData,
+        limit: action.payload
+      };
+
+    case 'SWITCH_SORT_TO_ZA':
+      return {
+        ...state.breedsData,
+        sort:'ZA'
+      };
+
+    case 'SWITCH_SORT_TO_AZ':
+      return {
+        ...state.breedsData,
+        sort:'AZ'
+      };
+
+    case 'RESET_BREEDS_DATA':
+      return {
+        selectedBreed: 'All breeds',
+        limit: 5,
+        sort: 'AZ',
+        breeds: [],
+        loading: true, 
+        error: null
+      };
+
     default:
       return state.breedsData;
   }

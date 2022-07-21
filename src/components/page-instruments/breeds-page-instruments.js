@@ -8,7 +8,10 @@ import BreedsImageListItem from '../breeds-image-list-item';
 
 import { 
     BreedsImageList,
-    BreedsPicker
+    BreedsPicker,
+    BreedsLimitPicker,
+    BreedsSortingZAButton,
+    BreedsSortingAZButton
 } from '../../containers';
 
 import './page-instruments.css';
@@ -22,6 +25,9 @@ const BreedsPageInstruments = () => {
                     <BackButton />
                     <InstrumentsLebel value = 'BREEDS' />
                     <BreedsPicker />
+                    <BreedsLimitPicker />
+                    <BreedsSortingZAButton />
+                    <BreedsSortingAZButton />
                 </div>
                 <BreedsImageList Item = { BreedsImageListItem } />
             </div>

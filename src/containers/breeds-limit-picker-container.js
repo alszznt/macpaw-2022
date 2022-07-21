@@ -8,13 +8,14 @@ import BreedsPickerOpen from '../components/breeds-picker-open';
 import BreedsPicker from '../components/breeds-picker';
 
 import { 
-    selectBreed
+    selectBreedsLimit
 } from '../actions';
 
-class BreedsPickerContainer extends Component {
+class BreedsLimitPickerContainer extends Component {
 
     state = {
-        isOpen: false
+        isOpen: false,
+        values: [{ id: 5, name: 5 }, { id: 10, name: 10 }, { id: 15, name: 15 }, { id: 20, name: 20 }]
     }
 
     onOpen = () => {
@@ -23,8 +24,8 @@ class BreedsPickerContainer extends Component {
         })
     }
 
-    onClose = (id) => {
-        this.props.selectBreed(id)
+    onClose = (val) => {
+        this.props.selectBreedsLimit(val)
         this.setState({
             isOpen: false
         })
@@ -36,33 +37,30 @@ class BreedsPickerContainer extends Component {
             return (
                 <BreedsPickerOpen 
                     onSelect = { (id) => this.onClose(id) } 
-                    breeds = { this.props.breeds }
-                    firstVal = 'All breeds '
+                    breeds = { this.state.values}
+                    text = 'Limit: '
                 />
             )
         } 
 
         return (
-            <BreedsPicker 
-                click = { () => this.onOpen() } 
-                value = { this.props.selectedBreed } 
-            />
+            <BreedsPicker click = { () => this.onOpen() } value = { this.props.limit } text = 'Limit: ' />
         )
     }
 
 }
 
-const mapStateToProps = ({ breedsData: { selectedBreed, breeds, loading, error } }) => {
-    return { selectedBreed, breeds, loading, error };
+const mapStateToProps = ({ breedsData: { limit } }) => {
+    return { limit };
 };
 
 const mapDispatchToProps = (dispatch, { catService }) => {
     return {
-        selectBreed: (name) => dispatch(selectBreed(name))
+        selectBreedsLimit: (val) => dispatch(selectBreedsLimit(val))
     };
 };
 
 export default compose(
     withCatService(),
     connect(mapStateToProps, mapDispatchToProps)
-)(BreedsPickerContainer);
+)(BreedsLimitPickerContainer);

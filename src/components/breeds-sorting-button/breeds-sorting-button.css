@@ -1,0 +1,42 @@
+.breeds-sorting-button{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background: #F8F8F7;
+    border-radius: 10px;
+    outline: 2px solid #F8F8F7;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.breeds-sorting-za-button-icon{
+    width: 20px;
+    height: 20px;
+    background-image: url('../../assets/sort-20.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.3s;
+}
+
+.breeds-sorting-az-button-icon{
+    width: 20px;
+    height: 20px;
+    background-image: url('../../assets/soft-revert-20.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.3s;
+}
+
+.breeds-sorting-button:hover{
+    outline: 2px solid #FBE0DC;
+}
+
+.breeds-sorting-button:hover > .breeds-sorting-za-button-icon{
+    background-image: url('../../assets/sort-color-20.svg');
+}
+
+.breeds-sorting-button:hover > .breeds-sorting-az-button-icon{
+    background-image: url('../../assets/sort-revert-color-20.svg');
+}

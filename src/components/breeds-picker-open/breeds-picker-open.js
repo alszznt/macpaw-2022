@@ -2,7 +2,7 @@ import React from 'react';
 
 import './breeds-picker-open.css';
 
-const BreedsPickerOpen = ({ breeds, onSelect }) => {
+const BreedsPickerOpen = ({ breeds, onSelect, text = null, firstVal = null }) => {
 
     const breedsList = breeds.map((data) => {
 
@@ -11,7 +11,7 @@ const BreedsPickerOpen = ({ breeds, onSelect }) => {
                 className = "breeds-picker-open-list-item"
                 key = { data.id }
                 onClick = { () => onSelect(data.name) }>
-                { data.name }
+                { !text ? null : text}{ data.name }
             </div>
         );
     });
@@ -19,7 +19,7 @@ const BreedsPickerOpen = ({ breeds, onSelect }) => {
     return(
         <div className = "breeds-picker-open">
             <div className = "breeds-picker-open-list">
-                <div className = "breeds-picker-open-list-item">All breeds </div>
+                { !firstVal ? null : <div className = "breeds-picker-open-list-item" onClick = { () => onSelect(firstVal) }>{ firstVal }</div> }
                 { breedsList }
             </div>
         </div>

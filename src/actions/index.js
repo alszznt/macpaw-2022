@@ -217,3 +217,28 @@ export const selectBreed = (data) => {
         payload: data
     };
 };
+
+export const selectBreedsLimit = (data) => {
+    return {
+        type: 'SELECT_BREEDS_LIMIT',
+        payload: data
+    };
+};
+
+export const switchSortToZA = () => {
+    return {
+        type: 'SWITCH_SORT_TO_ZA',
+    };
+};
+
+export const switchSortToAZ = () => {
+    return {
+        type: 'SWITCH_SORT_TO_AZ',
+    };
+};
+
+export const resetBreedsData = () => {
+    return {
+        type: 'RESET_BREEDS_DATA',
+    };
+};
