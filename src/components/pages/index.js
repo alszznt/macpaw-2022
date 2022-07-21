@@ -5,6 +5,7 @@ import GalleryPage from './gallery-page';
 import LikesPage from './likes-page';
 import DislikesPage from './dislikes-page';
 import FavouritesPage from './favourites-page';
+import CatsPage from './cats-page';
 
 export {
     HomePage,
@@ -13,5 +14,6 @@ export {
     GalleryPage,
     LikesPage,
     DislikesPage,
-    FavouritesPage
+    FavouritesPage,
+    CatsPage
 }

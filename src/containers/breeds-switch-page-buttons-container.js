@@ -16,7 +16,16 @@ class BreedsSwitchPageButtonsContainer extends Component {
 
     render() {
 
-        const { page, limit, breeds, incBreedsPage, decBreedsPage, selectedBreed, sort, sortArr } = this.props;
+        const { 
+            page, 
+            limit, 
+            breeds, 
+            incBreedsPage, 
+            decBreedsPage, 
+            selectedBreed, 
+            sort, 
+            sortArr 
+        } = this.props;
 
         return (
             <BreedsSwitchPageButtons 

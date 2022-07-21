@@ -2,7 +2,16 @@ import React from 'react';
 
 import { Route, Routes } from 'react-router-dom';
 
-import { HomePage, VotingPage, BreedsPage, GalleryPage, LikesPage, DislikesPage, FavouritesPage } from '../pages';
+import { 
+    HomePage, 
+    VotingPage, 
+    BreedsPage, 
+    GalleryPage, 
+    LikesPage, 
+    DislikesPage, 
+    FavouritesPage ,
+    CatsPage
+} from '../pages';
 
 import './app.css';
 
@@ -23,6 +32,11 @@ const App = () => {
             <Route
                 path="/breeds"
                 element={<BreedsPage />}
+            />
+
+            <Route
+                path="/breeds/:id"
+                element={<CatsPage />}
             />
 
             <Route

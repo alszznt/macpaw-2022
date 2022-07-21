@@ -11,6 +11,7 @@
     text-align: center;
     letter-spacing: 2px;
     color: #FF868E;
+    text-transform: uppercase;
 }
 .instruments-lebel-active{
     background: #FF868E;
