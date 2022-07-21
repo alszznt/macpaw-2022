@@ -40,7 +40,7 @@ class BreedsImageListContainer extends Component {
             first = limit * ( page - 1 )
             return [...newArr.slice(first, lust)];
         }else{
-            return [...arr.filter( (el) => el.name === selectedElement )]
+            return [...newArr.filter( (el) => el.name === selectedElement )]
         }
     }
 

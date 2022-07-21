@@ -17,6 +17,10 @@ class BreedsSortingZAButtonContainer extends Component {
 
 }
 
+const mapStateToProps = () => {
+    return {};
+};
+
 const mapDispatchToProps = (dispatch) => {
     return {
         switchSortToZA: () => dispatch(switchSortToZA()),
@@ -24,5 +28,5 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default compose(
-    connect( mapDispatchToProps )
+    connect(mapStateToProps, mapDispatchToProps)
 )(BreedsSortingZAButtonContainer);
