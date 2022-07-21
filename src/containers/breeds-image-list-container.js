@@ -26,9 +26,27 @@ class BreedsImageListContainer extends Component {
         resetBreedsData();
     }
 
+    sortArr = (arr) => (selectedElement, limit, page, sort) => {
+
+        let locArr = [...arr]
+        
+        let newArr;
+        sort === 'AZ' ? newArr = [...locArr] : newArr = [...locArr.reverse()];
+
+        if (selectedElement === 'All breeds'){
+            let lust;
+            limit * page >= newArr.length ? lust = newArr.length : lust = limit * page;
+            let first;
+            first = limit * ( page - 1 )
+            return [...newArr.slice(first, lust)];
+        }else{
+            return [...arr.filter( (el) => el.name === selectedElement )]
+        }
+    }
+
     render() {
         
-        const { breeds, loading, error, Item } = this.props;
+        const { breeds, loading, error, Item, selectedBreed, limit, sort, page } = this.props;
 
         if (loading){
             return <ElementLoadingIndicator />
@@ -46,9 +64,11 @@ class BreedsImageListContainer extends Component {
             return <ListNoResultIndicator />
         }
 
+        
+
         return (
             <ImageList 
-                list = { breeds }
+                list = { this.sortArr(breeds)(selectedBreed, limit, page, sort) }
                 Item = { Item }
             />
         )
@@ -56,8 +76,8 @@ class BreedsImageListContainer extends Component {
 
 }
 
-const mapStateToProps = ({ breedsData: { breeds, loading, error } }) => {
-    return { breeds, loading, error };
+const mapStateToProps = ({ breedsData: { breeds, loading, error, selectedBreed, limit, sort, page } }) => {
+    return { breeds, loading, error, selectedBreed, limit, sort, page };
 };
 
 const mapDispatchToProps = (dispatch, { catService }) => {

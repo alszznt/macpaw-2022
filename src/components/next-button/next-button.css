@@ -1,0 +1,57 @@
+.next-button{
+    width: max-content;
+    height: max-content;
+    display: grid;
+    grid-template-columns: auto 16px;
+    grid-gap: 0 10px;
+    padding: 12px 30px;
+    background: #F8F8F7;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.next-button-label{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    color: #8C8C8C;
+    transition: 0.3s;
+}
+
+.next-button-icon{
+    width: 16px;
+    height: 16px;
+    background-image: url('../../assets/fa6-solid_angle-left-1.svg');
+    transform: rotate(-180deg);
+    transition: 0.3s;
+}
+
+.next-button:hover{
+    background: #FBE0DC;
+}
+
+.next-button:hover > .next-button-label{
+    color: #FF868E;
+}
+
+.next-button:hover > .next-button-icon{
+    background-image: url('../../assets/fa6-solid_angle-left.svg');
+    transform: rotate(-180deg);
+}
+
+.next-button:active{
+    background: #FF868E;;
+}
+
+.next-button:active > .next-button-label{
+    color: #FFFFFF;
+}
+
+.next-button:active > .next-button-icon{
+    background-image: url('../../assets/fa6-solid_angle-left-2.svg');
+    transform: rotate(-180deg);
+}

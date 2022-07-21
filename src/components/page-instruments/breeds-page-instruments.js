@@ -11,7 +11,8 @@ import {
     BreedsPicker,
     BreedsLimitPicker,
     BreedsSortingZAButton,
-    BreedsSortingAZButton
+    BreedsSortingAZButton,
+    BreedsSwitchPageButtons
 } from '../../containers';
 
 import './page-instruments.css';
@@ -20,7 +21,7 @@ const BreedsPageInstruments = () => {
     return(
         <div className = "page-instruments-layout">
             <InstrumentsHeader />
-            <div className = "page-instruments-content">
+            <div className = "page-instruments-breeds-content">
                 <div className = "page-instruments-breeds-header">
                     <BackButton />
                     <InstrumentsLebel value = 'BREEDS' />
@@ -30,6 +31,7 @@ const BreedsPageInstruments = () => {
                     <BreedsSortingAZButton />
                 </div>
                 <BreedsImageList Item = { BreedsImageListItem } />
+                <BreedsSwitchPageButtons />
             </div>
         </div>
     )

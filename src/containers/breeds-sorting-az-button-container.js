@@ -10,18 +10,12 @@ class BreedsSortingAZButtonContainer extends Component {
 
     render() {
 
-        console.log(this.props.sort);
-
         return (
             <BreedsSortingButton switchSort = { this.props.switchSortToAZ } name = 'az' />
         )
     }
 
 }
-
-const mapStateToProps = ({ breedsData: { sort } }) => {
-    return { sort };
-};
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -30,5 +24,5 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default compose(
-    connect(mapStateToProps, mapDispatchToProps)
+    connect( mapDispatchToProps )
 )(BreedsSortingAZButtonContainer);

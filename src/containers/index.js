@@ -10,6 +10,7 @@ import BreedsPicker from './breeds-picker-container';
 import BreedsLimitPicker from './breeds-limit-picker-container';
 import BreedsSortingZAButton from './breeds-sorting-za-button-container';
 import BreedsSortingAZButton from './breeds-sorting-az-button-container';
+import BreedsSwitchPageButtons from './breeds-switch-page-buttons-container';
 
 export { 
     VotingImage,
@@ -23,5 +24,6 @@ export {
     BreedsPicker,
     BreedsLimitPicker,
     BreedsSortingZAButton,
-    BreedsSortingAZButton
+    BreedsSortingAZButton,
+    BreedsSwitchPageButtons
 }

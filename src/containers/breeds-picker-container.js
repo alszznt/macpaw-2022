@@ -37,7 +37,7 @@ class BreedsPickerContainer extends Component {
                 <BreedsPickerOpen 
                     onSelect = { (id) => this.onClose(id) } 
                     breeds = { this.props.breeds }
-                    firstVal = 'All breeds '
+                    firstVal = 'All breeds'
                 />
             )
         } 

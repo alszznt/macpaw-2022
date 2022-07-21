@@ -5,6 +5,7 @@ const updateBreedsData = (state, action) => {
       selectedBreed: 'All breeds',
       limit: 5,
       sort: 'AZ',
+      page: 1,
       breeds: [],
       loading: true, 
       error: null
@@ -40,25 +41,29 @@ const updateBreedsData = (state, action) => {
     case 'SELECT_BREED':
       return {
         ...state.breedsData,
-        selectedBreed: action.payload
+        selectedBreed: action.payload,
+        page: 1
       };
 
     case 'SELECT_BREEDS_LIMIT':
       return {
         ...state.breedsData,
-        limit: action.payload
+        limit: action.payload,
+        page: 1
       };
 
     case 'SWITCH_SORT_TO_ZA':
       return {
         ...state.breedsData,
-        sort:'ZA'
+        sort:'ZA',
+        page: 1
       };
 
     case 'SWITCH_SORT_TO_AZ':
       return {
         ...state.breedsData,
-        sort:'AZ'
+        sort: 'AZ',
+        page: 1
       };
 
     case 'RESET_BREEDS_DATA':
@@ -66,9 +71,22 @@ const updateBreedsData = (state, action) => {
         selectedBreed: 'All breeds',
         limit: 5,
         sort: 'AZ',
+        page: 1,
         breeds: [],
         loading: true, 
         error: null
+      };
+
+    case 'INC_BREEDS_PAGE':
+      return {
+        ...state.breedsData,
+        page: state.breedsData.page + 1
+      };
+
+    case 'DEC_BREEDS_PAGE':
+      return {
+        ...state.breedsData,
+        page: state.breedsData.page - 1
       };
 
     default:

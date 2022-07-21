@@ -204,7 +204,6 @@ const breedsError = (error) => {
 };
 
 export const getBreeds = (service, dispatch) => {
-    console.log(service);
     dispatch(breedsRequested());
     service.getBreeds()
       .then((data) => dispatch(getBreedsLoaded(data)))
@@ -242,3 +241,16 @@ export const resetBreedsData = () => {
         type: 'RESET_BREEDS_DATA',
     };
 };
+
+export const incBreedsPage = () => {
+    return {
+        type: 'INC_BREEDS_PAGE',
+    };
+};
+
+export const decBreedsPage = () => {
+    return {
+        type: 'DEC_BREEDS_PAGE',
+    };
+};
+
