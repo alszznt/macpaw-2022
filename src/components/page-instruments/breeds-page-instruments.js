@@ -4,9 +4,10 @@ import InstrumentsHeader from '../instruments-header';
 import InstrumentsLebel from '../instruments-lebel';
 import BackButton from '../back-button';
 
+import BreedsImageListItem from '../breeds-image-list-item';
+
 import { 
-    LikesImageListItem, 
-    VotesImageList
+    BreedsImageList
 } from '../../containers';
 
 import './page-instruments.css';
@@ -20,7 +21,7 @@ const BreedsPageInstruments = () => {
                     <BackButton />
                     <InstrumentsLebel value = 'BREEDS' />
                 </div>
-                {/* <VotesImageList Item = { LikesImageListItem } /> */}
+                <BreedsImageList Item = { BreedsImageListItem } />
             </div>
         </div>
     )

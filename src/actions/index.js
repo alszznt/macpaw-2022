@@ -182,3 +182,31 @@ export const getFavourite = (service, dispatch) => (limit, order, page) => {
       .then((data) => dispatch(getFavouriteLoaded(data)))
       .catch((err) => dispatch(favouriteError(err)));
 }
+
+const breedsRequested = () => {
+    return {
+      type: 'FETCH_BREEDS_DATA_REQUEST'
+    }
+};
+
+const getBreedsLoaded = (data) => {
+    return {
+        type: 'FETCH_BREEDS_DATA_SUCCESS',
+        payload: data
+    };
+};
+
+const breedsError = (error) => {
+    return {
+        type: 'FETCH_BREEDS_DATA_FAILURE',
+        payload: error
+    };
+};
+
+export const getBreeds = (service, dispatch) => {
+    console.log(service);
+    dispatch(breedsRequested());
+    service.getBreeds()
+      .then((data) => dispatch(getBreedsLoaded(data)))
+      .catch((err) => dispatch(breedsError(err)));
+};
