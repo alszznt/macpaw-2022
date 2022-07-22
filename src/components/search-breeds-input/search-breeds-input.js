@@ -5,8 +5,14 @@ import { Link } from 'react-router-dom';
 import './search-breeds-input.css';
 
 const SearchBreedsInput = ({ value, onSearchChange, onSearch }) => {
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        onSearch()
+    };
+
     return(
-        <form className = "search-breeds-input">
+        <form className = "search-breeds-input" onSubmit = { onSubmit }>
             <input 
                 className = "search-breeds-input-value"
                 type = "text"
