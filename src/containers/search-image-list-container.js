@@ -46,8 +46,8 @@ class SearchImageListContainer extends Component {
 
 }
 
-const mapStateToProps = ({ searchData: { loading, error, serchList } }) => {
-    return { loading, error, serchList };
+const mapStateToProps = ({ searchData: { value, loading, error, serchList } }) => {
+    return { value, loading, error, serchList };
 };
 
 const mapDispatchToProps = (dispatch, { catService }) => {

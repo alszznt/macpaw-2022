@@ -344,6 +344,7 @@ const searchError = (error) => {
 };
 
 export const getSearch = (service, dispatch) => (val) => {
+    console.log(val);
     dispatch(searchRequested(dispatch, val));
     service.fetchSearchData(val)
       .then((data) => dispatch(searchLoaded(data)))

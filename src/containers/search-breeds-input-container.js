@@ -21,7 +21,7 @@ class SearchBreedsInputContainer extends Component {
                 />
             )
     }
-};
+}; 
 
 const mapStateToProps = ({ searchData: { value }}) => {
     return { value };
