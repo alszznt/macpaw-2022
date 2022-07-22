@@ -4,11 +4,10 @@ import InstrumentsHeader from '../instruments-header';
 import InstrumentsLebel from '../instruments-lebel';
 import BackButton from '../back-button';
 
-import FavImageListItem from '../fav-image-list-item';
-
 import { 
     FavImageList, 
-    ActionsLogList
+    ActionsLogList,
+    FavImageListItem
 } from '../../containers';
 
 import './page-instruments.css';

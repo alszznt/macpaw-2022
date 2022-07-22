@@ -4,10 +4,11 @@ import './gallery-image-list-item.css';
 
 const GalleryImageListItem = ({ props }) => {
 
-    // console.log(props);
+    console.log(props);
 
     return(
-        <div>
+        <div className = "gallery-image-list-item">
+            <div className = "gallery-image-list-item-image" />
 
         </div>
     )

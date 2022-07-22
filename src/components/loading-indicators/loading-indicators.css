@@ -72,3 +72,22 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear; 
 }
+
+.gallery-fetch-button-loading{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.gallery-fetch-button-icon-loading{
+    width: 20px;
+    height: 20px;
+    background-image: url('../../assets/loading-16.png');
+    background-size:cover;
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}

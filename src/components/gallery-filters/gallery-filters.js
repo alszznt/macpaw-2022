@@ -1,12 +1,11 @@
 import React from 'react';
 
-import GalleryFetchButton from '../gallery-fetch-button';
-
 import {
     GalleryBreedPicker, 
     GalleryOrderPicker,
     GalleryTypePicker,
-    GalleryLimitPicker
+    GalleryLimitPicker,
+    GalleryFetchButton
 } from '../../containers';
 
 import './gallery-filters.css';

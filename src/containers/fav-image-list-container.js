@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ImageList from '../components/image-list';
+import ImageList from '../components/image-list'; 
 
 import { connect } from 'react-redux';
 import { withCatService } from '../components/hoc';
