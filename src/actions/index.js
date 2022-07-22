@@ -322,7 +322,8 @@ export const onSearchChange = (value) => {
     }
   };
 
-const searchRequested = () => {
+const searchRequested = (dispatch, val) => {
+    dispatch(setSearchVal(val));
     return {
       type: 'FETCH_SEARCH_DATA_REQUEST'
     }
@@ -343,10 +344,15 @@ const searchError = (error) => {
 };
 
 export const getSearch = (service, dispatch) => (val) => {
-    dispatch(searchRequested());
+    dispatch(searchRequested(dispatch, val));
     service.fetchSearchData(val)
       .then((data) => dispatch(searchLoaded(data)))
       .catch((err) => dispatch(searchError(err)));
 };
 
-
+const setSearchVal = (data) => {
+    return {
+        type: 'SET_SEARCH_VAL',
+        payload: data
+    };
+};

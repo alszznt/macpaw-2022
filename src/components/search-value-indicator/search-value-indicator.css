@@ -1,0 +1,18 @@
+.search-value-indicator{
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    color: #8C8C8C;
+    margin: 0 0 20px 0 ;
+}
+
+.search-value-indicator-bolt{
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    color: #1D1D1D;
+}

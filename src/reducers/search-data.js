@@ -6,6 +6,7 @@ const updateSearchData = (state, action) => {
         serchList: [],
         loading: true,
         error: null,
+        searchVal: ''
       };
     }
   
@@ -40,6 +41,14 @@ const updateSearchData = (state, action) => {
         ...state.searchData,
         value: action.payload
       };
+
+    case 'SET_SEARCH_VAL':
+      return {
+        ...state.searchData,
+        searchVal: action.payload
+      };
+
+
         
       default:
         return state.searchData;

@@ -4,6 +4,8 @@ import InstrumentsHeader from '../instruments-header';
 import InstrumentsLebel from '../instruments-lebel';
 import BackButton from '../back-button';
 
+import SearchValueIndicator from '../search-value-indicator';
+
 import { 
     SearchImageListItem, 
     SearchImageList
@@ -20,6 +22,7 @@ const SearchPageInstruments = () => {
                     <BackButton />
                     <InstrumentsLebel value = 'SEARCH' />
                 </div>
+                <SearchValueIndicator />
                 <SearchImageList Item = { SearchImageListItem } />
             </div>
         </div>
