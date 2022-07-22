@@ -24,6 +24,7 @@ import GalleryLimitPicker from './gallery-limit-picker-containe';
 import GalleryImageList from './gallery-image-list-container';
 import GalleryFetchButton from './gallery-fetch-button-container';
 import FavImageListItem from './fav-image-list-item-container';
+import GalleryImageListItem from './gallery-image-list-item-container';
 
 export { 
     VotingImage,
@@ -51,5 +52,6 @@ export {
     GalleryLimitPicker,
     GalleryImageList,
     GalleryFetchButton,
-    FavImageListItem
+    FavImageListItem,
+    GalleryImageListItem
 }

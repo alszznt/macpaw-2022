@@ -9,7 +9,8 @@ const updateGalleryData = (state, action) => {
         page: 0,
         galleryList: [],
         loading: true,
-        error: null
+        error: null,
+        reservData: {}
       };
     }
   
@@ -67,13 +68,19 @@ const updateGalleryData = (state, action) => {
     case 'ON_GALLERY_PAGES_INC':
         return {
             ...state.galleryData,
-            page: action.galleryData.page + 1
+            page: state.galleryData.page + 1
         };
 
     case 'ON_GALLERY_PAGES_DEC':
         return {
             ...state.galleryData,
-            page: action.galleryData.page - 1
+            page: state.galleryData.page - 1
+        };
+
+      case 'ON_GALLERY_DATA_RESERV':
+        return {
+            ...state.galleryData,
+            reservData: action.payload
         };
 
 

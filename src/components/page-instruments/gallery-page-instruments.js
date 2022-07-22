@@ -6,10 +6,11 @@ import BackButton from '../back-button';
 
 import GalleryFilters from '../gallery-filters';
 
-import GalleryImageListItem from '../gallery-image-list-item';
+import GallerySwitchPageButtons from '../gallery-switch-page-buttons';
 
 import { 
     GalleryImageList,
+    GalleryImageListItem,
     BreedsSwitchPageButtons
 } from '../../containers';
 

@@ -158,7 +158,8 @@ const getFavouriteLoaded = (data) => {
     };
 };
 
-export const addFavourite = (service, dispatch) => (id) => {
+export const addFavourite = (service, dispatch) => (id, sub) => {
+    dispatch(addFavouriteLog(id));
     dispatch(addFavouriteLog(id));
     dispatch(favouriteRequested());
     service.addFavourite(id)
@@ -378,6 +379,7 @@ const galleryError = (error) => {
 };
 
 export const getGalletyList = (service, dispatch) => (limit, type, page, order, breed) => {
+    dispatch(onGalleryDataReserv(limit, type, page, order, breed))
     dispatch(galleryRequested());
     service.getGalletyList(limit, type, page, order, breed)
       .then((data) => dispatch(galleryLoaded(data)))
@@ -422,5 +424,19 @@ export const onGalleryPagesInc = () => {
 export const onGalleryPagesDec = () => {
     return{
       type: 'ON_GALLERY_PAGES_DEC'
+    }
+};
+
+const onGalleryDataReserv = (limit, type, page, order, breed) => {
+    let data = {
+        limit: limit,
+        type: type,
+        page: page,
+        order: order,
+        breed: breed
+    }
+    return{
+      type: 'ON_GALLERY_DATA_RESERV',
+      payload: data
     }
 };
