@@ -11,22 +11,24 @@ import { ListNoResultIndicator, ImageErrorIndicator } from '../components/error-
 
 import { 
     getGalletyList,
-    getBreeds
+    getBreeds,
+    getFavourite
 } from '../actions';
 
 class GalleryImageListContainer extends Component {
 
     componentDidMount() {
-        const { getBreeds, getGalletyList } = this.props;
+        const { getBreeds, getGalletyList,getFavourite } = this.props;
         getGalletyList()
         getBreeds()
+        getFavourite('', 'DESC', 0);
     }
 
     render() {
         
-        const { galleryList, loading, error, Item } = this.props;
+        const { galleryList, loading, error, Item, favouriteData } = this.props;
 
-        if (loading){
+        if ( loading || favouriteData.loading ){
             return <ElementLoadingIndicator />
         }
 
@@ -50,14 +52,15 @@ class GalleryImageListContainer extends Component {
 
 }
 
-const mapStateToProps = ({ galleryData: { galleryList, loading, error } }) => {
-    return { galleryList, loading, error };
+const mapStateToProps = ({ galleryData: { galleryList, loading, error }, favouriteData }) => {
+    return { galleryList, loading, error, favouriteData };
 };
 
 const mapDispatchToProps = (dispatch, { catService }) => {
     return {
         getBreeds: () => getBreeds(catService, dispatch),
-        getGalletyList: () => getGalletyList(catService, dispatch)()
+        getGalletyList: () => getGalletyList(catService, dispatch)(),
+        getFavourite: (limit, order, page) => getFavourite(catService, dispatch)(limit, order, page),
     };
 };
 

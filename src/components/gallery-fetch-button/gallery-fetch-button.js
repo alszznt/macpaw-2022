@@ -14,10 +14,10 @@ class GalleryFetchButtonContainer extends Component {
 
     render() {
         
-        const { getGalletyList, galleryData } = this.props; 
+        const { getGalletyList, galleryData, favouriteData, breedsData } = this.props; 
         const { loading } = galleryData;
 
-        if(loading)return null
+        if(loading || favouriteData.loading || breedsData.loading)return <GalleryFetchButtonLoading />
 
         return (
             <GalleryFetchButton 
@@ -40,8 +40,17 @@ const GalleryFetchButton = ({ getList, data: { limit, type, page, order, breed }
     )
 }
 
-const mapStateToProps = ({ galleryData }) => {
-    return { galleryData };
+const GalleryFetchButtonLoading = () => {
+    return(
+        <div 
+            className = "gallery-fetch-button-loading">
+            <div className = "gallery-fetch-button-icon-loading"/>
+        </div>
+    )
+}
+
+const mapStateToProps = ({ galleryData, favouriteData, breedsData }) => {
+    return { galleryData, favouriteData, breedsData };
 };
 
 const mapDispatchToProps = (dispatch, { catService }) => {

@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { compose } from '../utils';
 
+import {ImageLoadingIndicator} from '../components/loading-indicators';
+
 import GalleryBreedsPickerOpen from '../components/gallery-breeds-picker-open';
 import BreedsPicker from '../components/breeds-picker';
 
@@ -30,6 +32,9 @@ class GalleryBreedPickerContainer extends Component {
     }
 
     render() {
+
+        if (this.props.loading) return <ImageLoadingIndicator/>
+        if (this.props.error) return null;
 
         let list = null;
 
