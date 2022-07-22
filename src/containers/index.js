@@ -14,6 +14,8 @@ import BreedsSwitchPageButtons from './breeds-switch-page-buttons-container';
 import CatsPageSliderButtons from './cats-page-slider-buttons-container';
 import CatImage from './cat-image-container';
 import CatInfo from './cat-info-container';
+import SearchBreedsInput from './search-breeds-input-container';
+import SearchImageList from './search-image-list-container';
 
 export { 
     VotingImage,
@@ -31,5 +33,7 @@ export {
     BreedsSwitchPageButtons,
     CatsPageSliderButtons,
     CatImage,
-    CatInfo
+    CatInfo,
+    SearchBreedsInput,
+    SearchImageList
 }

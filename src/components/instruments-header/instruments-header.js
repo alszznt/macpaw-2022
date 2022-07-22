@@ -1,7 +1,8 @@
 import React from 'react';
 
-import SearchBreedsInput from '../search-breeds-input';
 import InstrumentsHeaderNavigation from '../instruments-header-navigation';
+
+import { SearchBreedsInput } from '../../containers';
 
 import './instruments-header.css';
 

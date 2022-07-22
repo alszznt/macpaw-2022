@@ -315,4 +315,38 @@ export const getCatInfo = (data) => {
     };
 };
 
+export const onSearchChange = (value) => {
+    return{
+      type: 'ON_SEARCH_CHANGE',
+      payload: value
+    }
+  };
+
+const searchRequested = () => {
+    return {
+      type: 'FETCH_SEARCH_DATA_REQUEST'
+    }
+};
+
+const searchLoaded = (data) => {
+    return {
+        type: 'FETCH_SEARCH_DATA_SUCCESS',
+        payload: data
+    };
+};
+
+const searchError = (error) => {
+    return {
+        type: 'FETCH_SEARCH_DATA_FAILURE',
+        payload: error
+    };
+};
+
+export const getSearch = (service, dispatch) => (val) => {
+    dispatch(searchRequested());
+    service.fetchSearchData(val)
+      .then((data) => dispatch(searchLoaded(data)))
+      .catch((err) => dispatch(searchError(err)));
+};
+
 

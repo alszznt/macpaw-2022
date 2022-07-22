@@ -4,6 +4,7 @@ import DislikesPageInstruments from './dislikes-page-instruments';
 import FavouritesPageInstruments from './favourites-page-instruments';
 import BreedsPageInstruments from './breeds-page-instruments';
 import CatsPageInstruments from './cats-page-instruments';
+import SearchPageInstruments from './search-page-instruments';
 
 export {
     VotingPageInstruments,
@@ -11,5 +12,6 @@ export {
     DislikesPageInstruments,
     FavouritesPageInstruments,
     BreedsPageInstruments,
-    CatsPageInstruments
+    CatsPageInstruments,
+    SearchPageInstruments
 };

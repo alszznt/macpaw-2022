@@ -116,6 +116,18 @@ export default class CatService {
         return res;
     }
 
+    fetchSearchData = async (value) => {
+        const head = {
+            method: 'GET',
+            headers: {
+                'x-api-key': 'c91f4c8b-f7c1-4cee-9461-2f27f43bc610',
+                'Content-Type' : 'application/json',
+            }
+        }
+        const res = await this.getResource(`/breeds/search?q=${ value }`, head)
+        return res;
+    }
+
 
 
 }

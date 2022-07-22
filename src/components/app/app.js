@@ -10,7 +10,8 @@ import {
     LikesPage, 
     DislikesPage, 
     FavouritesPage ,
-    CatsPage
+    CatsPage,
+    SearchPage
 } from '../pages';
 
 import './app.css';
@@ -57,6 +58,11 @@ const App = () => {
             <Route
                 path="/favourites"
                 element={<FavouritesPage />}
+            />
+
+            <Route
+                path="/search"
+                element={<SearchPage />}
             />
 
         </Routes>
