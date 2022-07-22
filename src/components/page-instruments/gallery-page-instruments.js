@@ -6,14 +6,10 @@ import BackButton from '../back-button';
 
 import GalleryFilters from '../gallery-filters';
 
-import BreedsImageListItem from '../breeds-image-list-item';
+import GalleryImageListItem from '../gallery-image-list-item';
 
 import { 
-    BreedsImageList,
-    BreedsPicker,
-    BreedsLimitPicker,
-    BreedsSortingZAButton,
-    BreedsSortingAZButton,
+    GalleryImageList,
     BreedsSwitchPageButtons
 } from '../../containers';
 
@@ -23,17 +19,13 @@ const GalleryPageInstruments = () => {
     return(
         <div className = "page-instruments-layout">
             <InstrumentsHeader />
-            <div className = "page-instruments-breeds-content">
-                <div className = "page-instruments-breeds-header">
+            <div className = "page-instruments-content">
+                <div className = "page-instruments-header">
                     <BackButton />
                     <InstrumentsLebel value = 'GALLERY' />
-                    {/* <BreedsPicker />
-                    <BreedsLimitPicker />
-                    <BreedsSortingZAButton />
-                    <BreedsSortingAZButton /> */}
                 </div>
                 <GalleryFilters />
-                {/* <BreedsImageList Item = { BreedsImageListItem } /> */}
+                <GalleryImageList Item = { GalleryImageListItem } />
                 {/* <BreedsSwitchPageButtons /> */}
             </div>
         </div>

@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
 
 import { connect } from 'react-redux';
-import { withCatService } from '../components/hoc';
 import { compose } from '../utils';
 
-import BreedsPickerOpen from '../components/breeds-picker-open';
+import GalleryBreedsPickerOpen from '../components/gallery-breeds-picker-open';
 import BreedsPicker from '../components/breeds-picker';
 
 import { 
-    onGalleryBreedSelected,
-    getBreeds
+    onGalleryBreedSelected
 } from '../actions';
 
 class GalleryBreedPickerContainer extends Component {
@@ -18,19 +16,14 @@ class GalleryBreedPickerContainer extends Component {
         isOpen: false
     }
 
-    componentDidMount() {
-        const { getBreeds } = this.props;
-        getBreeds()
-    }
-
     onOpen = () => {
         this.setState({
             isOpen: true
         })
     }
 
-    onClose = (id) => {
-        this.props.onGalleryBreedSelected(id)
+    onClose = (name, id) => {
+        this.props.onGalleryBreedSelected(name, id)
         this.setState({
             isOpen: false
         })
@@ -42,10 +35,10 @@ class GalleryBreedPickerContainer extends Component {
 
         if (this.state.isOpen){
             list = (
-                <BreedsPickerOpen 
-                    onSelect = { (id) => this.onClose(id) } 
+                <GalleryBreedsPickerOpen 
+                    onSelect = { this.onClose } 
                     breeds = { this.props.breeds }
-                    firstVal = 'All breeds'
+                    firstVal = 'None'
                     color = '#FFFFFF'
                 />
             )
@@ -56,7 +49,7 @@ class GalleryBreedPickerContainer extends Component {
                 { list }
                 <BreedsPicker 
                     click = { () => this.onOpen() } 
-                    value = { this.props.breed }
+                    value = { this.props.breed.name }
                     color = '#FFFFFF'
                 />
             </>
@@ -69,14 +62,12 @@ const mapStateToProps = ({ breedsData: { breeds, loading, error }, galleryData: 
     return { breeds, breed, loading, error };
 };
 
-const mapDispatchToProps = (dispatch, { catService }) => {
+const mapDispatchToProps = (dispatch) => {
     return {
-        onGalleryBreedSelected: (breed) => dispatch(onGalleryBreedSelected(breed)),
-        getBreeds: () => getBreeds(catService, dispatch)
+        onGalleryBreedSelected: (name, id) => dispatch(onGalleryBreedSelected(name, id))
     };
 };
 
 export default compose(
-    withCatService(),
     connect(mapStateToProps, mapDispatchToProps)
 )(GalleryBreedPickerContainer);

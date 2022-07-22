@@ -21,6 +21,7 @@ import GalleryBreedPicker from './gallery-breed-picker-container';
 import GalleryOrderPicker from './gallery-order-picker-container';
 import GalleryTypePicker from './gallery-type-picker-container';
 import GalleryLimitPicker from './gallery-limit-picker-containe';
+import GalleryImageList from './gallery-image-list-container';
 
 export { 
     VotingImage,
@@ -45,5 +46,6 @@ export {
     GalleryBreedPicker,
     GalleryOrderPicker,
     GalleryTypePicker,
-    GalleryLimitPicker
+    GalleryLimitPicker,
+    GalleryImageList
 }

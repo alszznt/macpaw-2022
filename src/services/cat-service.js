@@ -128,7 +128,7 @@ export default class CatService {
         return res;
     }
 
-    getGalletyList = async (limit = 5, type = 'jpg,png,gif', page = 0, order = 'Random', breed = '') => {
+    getGalletyList = async (limit = 5, type = 'All', page = 0, order = 'Random', breed = 'None') => {
         const head = {
             method: 'GET',
             headers: {
@@ -136,8 +136,22 @@ export default class CatService {
                 'Content-Type' : 'application/json',
             }
         }
-        let isBreed = breed === '' ? '' : `&breed_ids=${ breed }`
-        const res = await this.getResource(`/images/search?limit=${ limit }&mime_types=${ type }&page=${ page }&order=${ order }${ isBreed }`, head)
+
+        console.log(breed);
+
+        let isBreed = breed === 'None' ? '' : `&breed_ids=${ breed }`;
+
+        let fetchOrder;
+        if ( order === 'Random' ) fetchOrder = 'RANDOM';
+        if ( order === 'Desc' ) fetchOrder = 'DESC';
+        if ( order === 'Asc' ) fetchOrder = 'ASC';
+
+        let fetchType;
+        if ( type === 'All' ) fetchType = 'jpg,png,gif';
+        if ( type === 'Static' ) fetchType = 'jpg,png';
+        if ( type === 'Animated' ) fetchType = 'gif';
+
+        const res = await this.getResource(`/images/search?limit=${ limit }&mime_types=${ fetchType }&page=${ page }&order=${ fetchOrder }${ isBreed }`, head)
         return res;
     }
 

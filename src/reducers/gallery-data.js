@@ -3,7 +3,7 @@ const updateGalleryData = (state, action) => {
     if (state === undefined) {
       return {
         order: 'Random',
-        breed: 'None',
+        breed: {name:'None', id:'None'},
         type: 'All',
         limit: 5,
         page: 0,
@@ -20,7 +20,8 @@ const updateGalleryData = (state, action) => {
         ...state.galleryData,
         galleryList: [],
         loading: true,
-        error: null
+        error: null,
+        page: 0
       };
 
     case 'FETCH_GALLERY_DATA_SUCCESS':

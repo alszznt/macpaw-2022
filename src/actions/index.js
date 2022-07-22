@@ -357,8 +357,7 @@ const setSearchVal = (data) => {
     };
 };
 
-const galleryRequested = (dispatch, val) => {
-    dispatch(setSearchVal(val));
+const galleryRequested = () => {
     return {
       type: 'FETCH_GALLERY_DATA_REQUEST'
     }
@@ -385,10 +384,11 @@ export const getGalletyList = (service, dispatch) => (limit, type, page, order, 
       .catch((err) => dispatch(galleryError(err)));
 };
 
-export const onGalleryBreedSelected = (breed) => {
+export const onGalleryBreedSelected = (name, id) => {
+    let val = { name: name, id: id}
     return{
       type: 'ON_GALLERY_BREED_SELECTED',
-      payload: breed
+      payload: val
     }
 };
 
