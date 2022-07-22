@@ -11,7 +11,6 @@ import GallerySwitchPageButtons from '../gallery-switch-page-buttons';
 import { 
     GalleryImageList,
     GalleryImageListItem,
-    BreedsSwitchPageButtons
 } from '../../containers';
 
 import './page-instruments.css';
@@ -27,7 +26,7 @@ const GalleryPageInstruments = () => {
                 </div>
                 <GalleryFilters />
                 <GalleryImageList Item = { GalleryImageListItem } />
-                {/* <BreedsSwitchPageButtons /> */}
+                <GallerySwitchPageButtons />
             </div>
         </div>
     )

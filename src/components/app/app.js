@@ -41,7 +41,7 @@ const App = () => {
             />
 
             <Route
-                path="/gallery"
+                path="/gallery/"
                 element={<GalleryPage />}
             />
 

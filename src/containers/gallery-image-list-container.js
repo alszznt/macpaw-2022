@@ -15,13 +15,14 @@ import {
     getFavourite
 } from '../actions';
 
-class GalleryImageListContainer extends Component {
+class GalleryImageListContainer extends Component { 
 
     componentDidMount() {
         const { getBreeds, getGalletyList,getFavourite } = this.props;
-        getGalletyList()
+        getGalletyList(5, 'All', 0, 'Random', 'None', true)
         getBreeds()
         getFavourite('', 'DESC', 0);
+        console.log('MOUNT');
     }
 
     render() {
@@ -59,7 +60,7 @@ const mapStateToProps = ({ galleryData: { galleryList, loading, error }, favouri
 const mapDispatchToProps = (dispatch, { catService }) => {
     return {
         getBreeds: () => getBreeds(catService, dispatch),
-        getGalletyList: () => getGalletyList(catService, dispatch)(),
+        getGalletyList: (limit, type, page, order, breed, isReset) => getGalletyList(catService, dispatch)(limit, type, page, order, breed, isReset),
         getFavourite: (limit, order, page) => getFavourite(catService, dispatch)(limit, order, page),
     };
 };

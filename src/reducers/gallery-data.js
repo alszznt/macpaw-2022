@@ -21,8 +21,7 @@ const updateGalleryData = (state, action) => {
         ...state.galleryData,
         galleryList: [],
         loading: true,
-        error: null,
-        page: 0
+        error: null
       };
 
     case 'FETCH_GALLERY_DATA_SUCCESS':
@@ -83,7 +82,11 @@ const updateGalleryData = (state, action) => {
             reservData: action.payload
         };
 
-
+      case 'GALLERY_PAGE_RESET':
+        return {
+            ...state.galleryData,
+            page: 0
+        };
         
       default:
         return state.galleryData;

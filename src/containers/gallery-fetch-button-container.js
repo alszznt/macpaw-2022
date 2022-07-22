@@ -23,7 +23,7 @@ class GalleryFetchButtonContainer extends Component {
 
         return (
             <GalleryFetchButton 
-                getList = {  getGalletyList } 
+                getList = { getGalletyList } 
                 data = { galleryData }
             />
         )
@@ -37,7 +37,7 @@ const mapStateToProps = ({ galleryData, favouriteData, breedsData }) => {
 
 const mapDispatchToProps = (dispatch, { catService }) => {
     return {
-        getGalletyList: ( limit, type, page, order, breed ) => getGalletyList(catService, dispatch)( limit, type, page, order, breed )
+        getGalletyList: ( limit, type, page, order, breed, isReset ) => getGalletyList(catService, dispatch)( limit, type, page, order, breed, isReset ),
     };
 };
 

@@ -137,8 +137,6 @@ export default class CatService {
             }
         }
 
-        console.log(breed);
-
         let isBreed = breed === 'None' ? '' : `&breed_ids=${ breed }`;
 
         let fetchOrder;

@@ -378,7 +378,10 @@ const galleryError = (error) => {
     };
 };
 
-export const getGalletyList = (service, dispatch) => (limit, type, page, order, breed) => {
+export const getGalletyList = (service, dispatch) => (limit, type, page, order, breed, isReset) => {
+
+    if (isReset) dispatch(galleryPageReset())
+
     dispatch(onGalleryDataReserv(limit, type, page, order, breed))
     dispatch(galleryRequested());
     service.getGalletyList(limit, type, page, order, breed)
@@ -415,13 +418,19 @@ export const onGalleryLimitSelected = (limit) => {
     }
 };
 
-export const onGalleryPagesInc = () => {
+export const onGalleryPagesInc = (service, dispatch) => (data, page) => {
+    const { limit, type, order, breed } = data
+    getGalletyList(service, dispatch)(limit, type, page+1, order, breed, false)
+
     return{
       type: 'ON_GALLERY_PAGES_INC'
     }
 };
 
-export const onGalleryPagesDec = () => {
+export const onGalleryPagesDec = (service, dispatch) => (data, page) => {
+    const { limit, type, order, breed } = data
+    getGalletyList(service, dispatch)(limit, type, page-1, order, breed, false)
+    
     return{
       type: 'ON_GALLERY_PAGES_DEC'
     }
@@ -438,5 +447,11 @@ const onGalleryDataReserv = (limit, type, page, order, breed) => {
     return{
       type: 'ON_GALLERY_DATA_RESERV',
       payload: data
+    }
+};
+
+const galleryPageReset = () => {
+    return{
+      type: 'GALLERY_PAGE_RESET'
     }
 };

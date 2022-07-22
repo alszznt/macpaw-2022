@@ -6,7 +6,7 @@ const GalleryFetchButton = ({ getList, data: { limit, type, page, order, breed }
     return(
         <div 
             className = "gallery-fetch-button" 
-            onClick = { () => getList(limit, type, page, order, breed.id) }>
+            onClick = { () => getList(limit, type, page, order, breed.id, true) }>
             <div className = "gallery-fetch-button-icon"/>
         </div>
     )

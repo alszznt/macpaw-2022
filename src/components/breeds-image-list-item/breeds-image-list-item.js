@@ -8,8 +8,6 @@ import './breeds-image-list-item.css';
 
 const BreedsImageListItem = ({ props }) => {
 
-    console.log(props);
-
     return(
         <div className = "breeds-image-list-item">
             { props.image === undefined ? <ImageErrorIndicator /> : <Image url = { props.image.url }/> }
