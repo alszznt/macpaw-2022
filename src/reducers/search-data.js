@@ -36,7 +36,6 @@ const updateSearchData = (state, action) => {
       };
 
     case 'ON_SEARCH_CHANGE':
-        console.log(action.payload);
       return {
         ...state.searchData,
         value: action.payload

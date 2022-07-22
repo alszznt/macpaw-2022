@@ -20,7 +20,7 @@ class SearchImageListContainer extends Component {
 
     render() {
         
-        const { value, loading, error, serchList, Item } = this.props;
+        const { loading, error, serchList, Item } = this.props;
 
         if (loading){
             return <ElementLoadingIndicator />
@@ -36,8 +36,6 @@ class SearchImageListContainer extends Component {
             return <ListNoResultIndicator />
         }
 
-        console.log(serchList);
-
         return (
             <ImageList 
                 list = { serchList }
@@ -48,8 +46,8 @@ class SearchImageListContainer extends Component {
 
 }
 
-const mapStateToProps = ({ searchData: { value, loading, error, serchList } }) => {
-    return { value, loading, error, serchList };
+const mapStateToProps = ({ searchData: { loading, error, serchList } }) => {
+    return { loading, error, serchList };
 };
 
 const mapDispatchToProps = (dispatch, { catService }) => {

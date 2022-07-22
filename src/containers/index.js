@@ -16,6 +16,7 @@ import CatImage from './cat-image-container';
 import CatInfo from './cat-info-container';
 import SearchBreedsInput from './search-breeds-input-container';
 import SearchImageList from './search-image-list-container';
+import SearchImageListItem from './search-image-list-item-container';
 
 export { 
     VotingImage,
@@ -35,5 +36,6 @@ export {
     CatImage,
     CatInfo,
     SearchBreedsInput,
-    SearchImageList
+    SearchImageList,
+    SearchImageListItem
 }

@@ -5,7 +5,7 @@ import InstrumentsLebel from '../instruments-lebel';
 import BackButton from '../back-button';
 
 import { 
-    LikesImageListItem, 
+    SearchImageListItem, 
     SearchImageList
 } from '../../containers';
 
@@ -20,7 +20,7 @@ const SearchPageInstruments = () => {
                     <BackButton />
                     <InstrumentsLebel value = 'SEARCH' />
                 </div>
-                <SearchImageList Item = { LikesImageListItem } />
+                <SearchImageList Item = { SearchImageListItem } />
             </div>
         </div>
     )
