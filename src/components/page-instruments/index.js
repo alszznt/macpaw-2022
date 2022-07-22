@@ -6,6 +6,7 @@ import BreedsPageInstruments from './breeds-page-instruments';
 import CatsPageInstruments from './cats-page-instruments';
 import SearchPageInstruments from './search-page-instruments';
 import GalleryPageInstruments from './gallery-page-instruments';
+import UploadPageInstruments from './upload-page-instruments';
 
 export {
     VotingPageInstruments,
@@ -15,5 +16,6 @@ export {
     BreedsPageInstruments,
     CatsPageInstruments,
     SearchPageInstruments,
-    GalleryPageInstruments
+    GalleryPageInstruments,
+    UploadPageInstruments
 };

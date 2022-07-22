@@ -1,0 +1,45 @@
+
+.link-to-upload{
+    width: max-content;
+    min-height: 40px;
+    padding: 12px 30px;
+    display: grid;
+    grid-template-columns: 16px auto;
+    grid-gap: 0 10px;
+    background: #FBE0DC;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.link-to-upload-icon{
+    width: 16px;
+    height: 16px;
+    background-image: url('../../assets/upload-16.svg');
+    transition: 0.3s;
+}
+
+.link-to-upload-label{
+    font-family: 'Jost', sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #FF868E;
+    transition: 0.3s;
+}
+
+.link-to-upload:hover {
+    background: #FF868E;
+}
+
+.link-to-upload:hover > .link-to-upload-label{
+    color: #FFFFFF;
+}
+
+.link-to-upload:hover > .link-to-upload-icon{
+    background-image: url('../../assets/upload-white-16.svg');
+}

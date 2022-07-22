@@ -160,7 +160,6 @@ const getFavouriteLoaded = (data) => {
 
 export const addFavourite = (service, dispatch) => (id, sub) => {
     dispatch(addFavouriteLog(id));
-    dispatch(addFavouriteLog(id));
     dispatch(favouriteRequested());
     service.addFavourite(id)
       .then(() => dispatch(addFavouriteLoaded(id)))

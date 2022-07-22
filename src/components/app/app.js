@@ -11,7 +11,8 @@ import {
     DislikesPage, 
     FavouritesPage ,
     CatsPage,
-    SearchPage
+    SearchPage,
+    UploadPage
 } from '../pages';
 
 import './app.css';
@@ -41,8 +42,17 @@ const App = () => {
             />
 
             <Route
-                path="/gallery/"
+                path="/gallery"
                 element={<GalleryPage />}
+            />
+
+            <Route
+                path="/gallery/upload"
+                element={
+                    <>  <UploadPage />
+                        <GalleryPage />
+                    </>
+                }
             />
 
             <Route

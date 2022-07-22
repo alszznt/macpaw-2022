@@ -7,6 +7,7 @@ import DislikesPage from './dislikes-page';
 import FavouritesPage from './favourites-page';
 import CatsPage from './cats-page';
 import SearchPage from './search-page';
+import UploadPage from './upload-page';
 
 export {
     HomePage,
@@ -17,5 +18,6 @@ export {
     DislikesPage,
     FavouritesPage,
     CatsPage,
-    SearchPage
+    SearchPage,
+    UploadPage
 }
