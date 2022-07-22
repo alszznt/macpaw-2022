@@ -1,0 +1,35 @@
+.gallery-filters{
+    width: 100%;
+    height: max-content;
+    display: grid;
+    grid-gap: 10px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 20px 20px 20px;
+    background: #F8F8F7;
+    border-radius: 20px;
+}
+
+.picker-with-label{
+    display: grid;
+}
+
+.picker-with-label-text{
+    padding: 0 0 0 10px;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 18px;
+    color: #8C8C8C;
+}
+
+.gallery-filters-filt-with-button{
+    display: grid;
+    grid-template-columns: auto 40px;
+    grid-gap: 0 10px;
+}
+
+.gallery-filters-button-container{
+    display: grid;
+    grid-template-rows: auto 40px;
+}

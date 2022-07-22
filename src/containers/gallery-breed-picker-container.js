@@ -8,14 +8,19 @@ import BreedsPickerOpen from '../components/breeds-picker-open';
 import BreedsPicker from '../components/breeds-picker';
 
 import { 
-    selectBreedsLimit
+    onGalleryBreedSelected,
+    getBreeds
 } from '../actions';
 
-class BreedsLimitPickerContainer extends Component {
+class GalleryBreedPickerContainer extends Component {
 
     state = {
-        isOpen: false,
-        values: [{ id: 5, name: 5 }, { id: 10, name: 10 }, { id: 15, name: 15 }, { id: 20, name: 20 }]
+        isOpen: false
+    }
+
+    componentDidMount() {
+        const { getBreeds } = this.props;
+        getBreeds()
     }
 
     onOpen = () => {
@@ -24,8 +29,8 @@ class BreedsLimitPickerContainer extends Component {
         })
     }
 
-    onClose = (val) => {
-        this.props.selectBreedsLimit(val)
+    onClose = (id) => {
+        this.props.onGalleryBreedSelected(id)
         this.setState({
             isOpen: false
         })
@@ -39,37 +44,39 @@ class BreedsLimitPickerContainer extends Component {
             list = (
                 <BreedsPickerOpen 
                     onSelect = { (id) => this.onClose(id) } 
-                    breeds = { this.state.values}
-                    text = 'Limit: '
+                    breeds = { this.props.breeds }
+                    firstVal = 'All breeds'
+                    color = '#FFFFFF'
                 />
             )
-        } 
+        }
 
         return (
-            <div>
+            <>
                 { list }
                 <BreedsPicker 
                     click = { () => this.onOpen() } 
-                    value = { this.props.limit } 
-                    text = 'Limit: ' 
+                    value = { this.props.breed }
+                    color = '#FFFFFF'
                 />
-            </div>
+            </>
         )
     }
 
 }
 
-const mapStateToProps = ({ breedsData: { limit } }) => {
-    return { limit };
+const mapStateToProps = ({ breedsData: { breeds, loading, error }, galleryData: { breed } }) => {
+    return { breeds, breed, loading, error };
 };
 
 const mapDispatchToProps = (dispatch, { catService }) => {
     return {
-        selectBreedsLimit: (val) => dispatch(selectBreedsLimit(val))
+        onGalleryBreedSelected: (breed) => dispatch(onGalleryBreedSelected(breed)),
+        getBreeds: () => getBreeds(catService, dispatch)
     };
 };
 
 export default compose(
     withCatService(),
     connect(mapStateToProps, mapDispatchToProps)
-)(BreedsLimitPickerContainer);
+)(GalleryBreedPickerContainer);

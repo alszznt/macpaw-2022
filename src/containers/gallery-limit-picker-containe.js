@@ -1,21 +1,25 @@
 import React, { Component } from 'react'
 
 import { connect } from 'react-redux';
-import { withCatService } from '../components/hoc';
 import { compose } from '../utils';
 
 import BreedsPickerOpen from '../components/breeds-picker-open';
 import BreedsPicker from '../components/breeds-picker';
 
 import { 
-    selectBreedsLimit
+    onGalleryLimitSelected
 } from '../actions';
 
-class BreedsLimitPickerContainer extends Component {
+class GalleryLimitPickerContainer extends Component {
 
     state = {
         isOpen: false,
-        values: [{ id: 5, name: 5 }, { id: 10, name: 10 }, { id: 15, name: 15 }, { id: 20, name: 20 }]
+        limits:[
+            {id: 1, name: 3},
+            {id: 2, name: 5},
+            {id: 3, name: 7},
+            {id: 4, name: 10},
+        ]
     }
 
     onOpen = () => {
@@ -24,8 +28,8 @@ class BreedsLimitPickerContainer extends Component {
         })
     }
 
-    onClose = (val) => {
-        this.props.selectBreedsLimit(val)
+    onClose = (id) => {
+        this.props.onGalleryLimitSelected(id)
         this.setState({
             isOpen: false
         })
@@ -39,37 +43,36 @@ class BreedsLimitPickerContainer extends Component {
             list = (
                 <BreedsPickerOpen 
                     onSelect = { (id) => this.onClose(id) } 
-                    breeds = { this.state.values}
-                    text = 'Limit: '
+                    breeds = { this.state.limits }
+                    color = '#FFFFFF'
                 />
             )
-        } 
+        }
 
         return (
-            <div>
+            <>
                 { list }
                 <BreedsPicker 
                     click = { () => this.onOpen() } 
-                    value = { this.props.limit } 
-                    text = 'Limit: ' 
-                />
-            </div>
+                    value = { this.props.limit }
+                    color = '#FFFFFF' 
+                /> 
+            </>
         )
     }
 
 }
 
-const mapStateToProps = ({ breedsData: { limit } }) => {
+const mapStateToProps = ({ galleryData: { limit } }) => {
     return { limit };
 };
 
-const mapDispatchToProps = (dispatch, { catService }) => {
+const mapDispatchToProps = (dispatch) => {
     return {
-        selectBreedsLimit: (val) => dispatch(selectBreedsLimit(val))
+        onGalleryLimitSelected: (order) => dispatch(onGalleryLimitSelected(order))
     };
 };
 
 export default compose(
-    withCatService(),
     connect(mapStateToProps, mapDispatchToProps)
-)(BreedsLimitPickerContainer);
+)(GalleryLimitPickerContainer);

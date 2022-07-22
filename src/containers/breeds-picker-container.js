@@ -32,8 +32,10 @@ class BreedsPickerContainer extends Component {
 
     render() {
 
+        let list = null;
+
         if (this.state.isOpen){
-            return (
+            list = (
                 <BreedsPickerOpen 
                     onSelect = { (id) => this.onClose(id) } 
                     breeds = { this.props.breeds }
@@ -43,10 +45,13 @@ class BreedsPickerContainer extends Component {
         } 
 
         return (
-            <BreedsPicker 
-                click = { () => this.onOpen() } 
-                value = { this.props.selectedBreed } 
-            />
+            <div>
+                { list }
+                <BreedsPicker 
+                    click = { () => this.onOpen() } 
+                    value = { this.props.selectedBreed } 
+                />
+            </div>
         )
     }
 

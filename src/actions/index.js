@@ -344,7 +344,6 @@ const searchError = (error) => {
 };
 
 export const getSearch = (service, dispatch) => (val) => {
-    console.log(val);
     dispatch(searchRequested(dispatch, val));
     service.fetchSearchData(val)
       .then((data) => dispatch(searchLoaded(data)))
@@ -356,4 +355,72 @@ const setSearchVal = (data) => {
         type: 'SET_SEARCH_VAL',
         payload: data
     };
+};
+
+const galleryRequested = (dispatch, val) => {
+    dispatch(setSearchVal(val));
+    return {
+      type: 'FETCH_GALLERY_DATA_REQUEST'
+    }
+};
+
+const galleryLoaded = (data) => {
+    return {
+        type: 'FETCH_GALLERY_DATA_SUCCESS',
+        payload: data
+    };
+};
+
+const galleryError = (error) => {
+    return {
+        type: 'FETCH_GALLERY_DATA_FAILURE',
+        payload: error
+    };
+};
+
+export const getGalletyList = (service, dispatch) => (limit, type, page, order, breed) => {
+    dispatch(galleryRequested());
+    service.getGalletyList(limit, type, page, order, breed)
+      .then((data) => dispatch(galleryLoaded(data)))
+      .catch((err) => dispatch(galleryError(err)));
+};
+
+export const onGalleryBreedSelected = (breed) => {
+    return{
+      type: 'ON_GALLERY_BREED_SELECTED',
+      payload: breed
+    }
+};
+
+export const onGalleryOrderSelected = (order) => {
+    return{
+      type: 'ON_GALLERY_ORDER_SELECTED',
+      payload: order
+    }
+};
+
+export const onGalleryTypeSelected = (type) => {
+    return{
+      type: 'ON_GALLERY_TYPE_SELECTED',
+      payload: type
+    }
+};
+
+export const onGalleryLimitSelected = (limit) => {
+    return{
+      type: 'ON_GALLERY_LIMIT_SELECTED',
+      payload: limit
+    }
+};
+
+export const onGalleryPagesInc = () => {
+    return{
+      type: 'ON_GALLERY_PAGES_INC'
+    }
+};
+
+export const onGalleryPagesDec = () => {
+    return{
+      type: 'ON_GALLERY_PAGES_DEC'
+    }
 };

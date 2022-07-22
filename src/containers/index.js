@@ -17,6 +17,10 @@ import CatInfo from './cat-info-container';
 import SearchBreedsInput from './search-breeds-input-container';
 import SearchImageList from './search-image-list-container';
 import SearchImageListItem from './search-image-list-item-container';
+import GalleryBreedPicker from './gallery-breed-picker-container';
+import GalleryOrderPicker from './gallery-order-picker-container';
+import GalleryTypePicker from './gallery-type-picker-container';
+import GalleryLimitPicker from './gallery-limit-picker-containe';
 
 export { 
     VotingImage,
@@ -37,5 +41,9 @@ export {
     CatInfo,
     SearchBreedsInput,
     SearchImageList,
-    SearchImageListItem
+    SearchImageListItem,
+    GalleryBreedPicker,
+    GalleryOrderPicker,
+    GalleryTypePicker,
+    GalleryLimitPicker
 }

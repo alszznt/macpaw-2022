@@ -5,6 +5,7 @@ import updateFavouriteData from './favourite-data'
 import updateBreedsData from './breeds-data';
 import updateCatsData from './cats-data';
 import updateSearchData from './search-data';
+import updateGalleryData from './gallery-data';
 
 const reducer = (state, action) => {
   return {
@@ -14,7 +15,8 @@ const reducer = (state, action) => {
     favouriteData: updateFavouriteData(state, action),
     breedsData: updateBreedsData(state, action),
     catsData: updateCatsData(state ,action),
-    searchData: updateSearchData(state, action)
+    searchData: updateSearchData(state, action),
+    galleryData: updateGalleryData(state, action)
   };
 };
 
