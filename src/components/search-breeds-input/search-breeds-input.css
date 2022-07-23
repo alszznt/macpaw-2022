@@ -9,16 +9,16 @@
     padding: 0 10px 0 0;
     border-radius: 20px;
     overflow: hidden;
-    outline: 2px solid rgba(255, 255, 255, 1);
+    border: 2px solid rgba(255, 255, 255, 1);
     transition: 0.3s;
 }
 
 .search-breeds-input:hover {
-    outline: 2px solid rgba(251, 224, 220, 1);
+    border: 2px solid rgba(251, 224, 220, 1);
 }
 
 .search-breeds-input:focus-within{
-    outline: 2px solid rgba(255, 134, 142, 1) !important;
+    border: 2px solid rgba(255, 134, 142, 1) !important;
 }
 
 .search-breeds-input-value{
@@ -78,7 +78,7 @@
 }
 
 .search-breeds-input-active{
-    outline: 2px solid rgba(255, 134, 142, 1) !important;
+    border: 2px solid rgba(255, 134, 142, 1) !important;
 }
 
 .search-breeds-input-active > .search-breeds-input-value::placeholder{

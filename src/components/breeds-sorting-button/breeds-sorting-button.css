@@ -1,10 +1,10 @@
 .breeds-sorting-button{
     width: 40px;
     height: 40px;
-    padding: 10px;
+    padding: 8px;
     background: #F8F8F7;
     border-radius: 10px;
-    outline: 2px solid #F8F8F7;
+    border: 2px solid #F8F8F7;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -30,7 +30,7 @@
 }
 
 .breeds-sorting-button:hover{
-    outline: 2px solid #FBE0DC;
+    border: 2px solid #FBE0DC;
 }
 
 .breeds-sorting-button:hover > .breeds-sorting-za-button-icon{
