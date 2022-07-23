@@ -76,3 +76,11 @@
     border: 0;
     outline: none;
 }
+
+.search-breeds-input-active{
+    outline: 2px solid rgba(255, 134, 142, 1) !important;
+}
+
+.search-breeds-input-active > .search-breeds-input-value::placeholder{
+    color: rgba(255, 134, 142, 1);
+}
