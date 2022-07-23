@@ -2,7 +2,13 @@ import React from 'react';
 
 import UploadPageCloseButton from '../upload-page-close-button';
 
-import { UploadFileInput } from '../../containers';
+import UploadIndicator from '../upload-indicator';
+
+import { 
+    UploadFileInput, 
+    FileNameTag,
+    UploadPhotoButton
+} from '../../containers';
 
 import './page-instruments.css';
 
@@ -15,6 +21,9 @@ const UploadPageInstruments = () => {
                     <UploadPageCloseButton/>
                 </div>
                 <UploadFileInput />
+                <FileNameTag />
+                <UploadPhotoButton />
+                {/* <UploadIndicator /> */}
             </div>
         </div>
     )

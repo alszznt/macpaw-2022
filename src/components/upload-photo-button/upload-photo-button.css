@@ -1,0 +1,16 @@
+.upload-photo-button{
+    font-family: 'Jost', sans-serif;
+    width: max-content;
+    padding: 12px 30px;
+    margin: 20px auto 0 auto;
+    cursor: pointer;
+    background: #FF868E;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 2px;
+}

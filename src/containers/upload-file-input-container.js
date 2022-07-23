@@ -4,6 +4,8 @@ import { compose } from '../utils';
 import { withCatService } from '../components/hoc';
 import { connect } from 'react-redux';
 
+import { ElementLoadingIndicator } from '../components/loading-indicators';
+
 import {
     UploadFileInput,
     UploadFileInputActive,
@@ -49,7 +51,9 @@ class UploadFileInputContainer extends Component {
     }
 
     render() {
-        const { file, fetchFile, error } = this.props;
+        const { file, fetchFile, error, loading } = this.props;
+
+        if(loading) return <ElementLoadingIndicator />
 
         if(file && error) return <UploadFileInputImage file = { file } isActive = { true } />
 
