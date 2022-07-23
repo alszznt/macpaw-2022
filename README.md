@@ -8,7 +8,7 @@ In the project directory in the src folder you can find the parts responsible fo
 
 ### Project demo 
 
-by clicking on the link `https://62dc210e9a5f563159214532--celadon-alpaca-e0a436.netlify.app` you will see a public demo version of the project
+by clicking on the [link](https://62dc105c0a983d26961f49b1--celadon-alpaca-e0a436.netlify.app) you will see a public demo version of the project
 
 ### Local project run
 
@@ -25,3 +25,7 @@ In the `containers` directory, there are higher-order components that pass data 
 ### UI components
 
 `components` folder contains all components that are reused in higher-order components with little or no local logic
+
+### API 
+
+in the `services` components responsible for working with api
