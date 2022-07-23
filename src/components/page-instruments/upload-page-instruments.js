@@ -2,7 +2,7 @@ import React from 'react';
 
 import UploadPageCloseButton from '../upload-page-close-button';
 
-import UploadFileInput from '../upload-file-input';
+import { UploadFileInput } from '../../containers';
 
 import './page-instruments.css';
 

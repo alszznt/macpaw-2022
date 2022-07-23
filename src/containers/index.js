@@ -25,6 +25,7 @@ import GalleryImageList from './gallery-image-list-container';
 import GalleryFetchButton from './gallery-fetch-button-container';
 import FavImageListItem from './fav-image-list-item-container';
 import GalleryImageListItem from './gallery-image-list-item-container';
+import UploadFileInput from './upload-file-input-container';
 
 export { 
     VotingImage,
@@ -53,5 +54,6 @@ export {
     GalleryImageList,
     GalleryFetchButton,
     FavImageListItem,
-    GalleryImageListItem
+    GalleryImageListItem,
+    UploadFileInput
 }

@@ -3,6 +3,7 @@ const updateUploadData = (state, action) => {
     if (state === undefined) {
       return {
         file: null,
+        success: false,
         error: null,
         searchVal: ''
       };
@@ -13,6 +14,7 @@ const updateUploadData = (state, action) => {
       case 'FETCH_FILE_DATA_REQUEST': 
       return {
         ...state.uploadData,
+        success: false,
         loading: true,
         error: null
       };
@@ -21,6 +23,7 @@ const updateUploadData = (state, action) => {
       return {
         ...state.uploadData,
         file: null,
+        success: true,
         loading: false,
         error: null
       };
