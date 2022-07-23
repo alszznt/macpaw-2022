@@ -1,10 +1,17 @@
+import axios from 'axios'
+
 export default class CatService {
 
     _apiBase = 'https://api.thecatapi.com/v1';
     _subId = 'user-1';
 
-    getResource = async (url, head) => {
-        const res = await fetch(`${this._apiBase}${url}`, head);
+    getResource = async (url, head, subhead) => {
+
+        let res;
+
+        subhead ? 
+        res = await fetch(`${this._apiBase}${url}`, head, subhead) : 
+        res = await fetch(`${this._apiBase}${url}`, head)
     
         if (!res.ok) {
           throw new Error(`${res.status}`)
@@ -153,22 +160,21 @@ export default class CatService {
     }
 
     fetchFile = async (file) => {
-        const data = new FormData()
-        data.append('file', file, file.name)
-        console.log(data);
+
+        let formData = new FormData();
+        formData.append('file', file);
+        console.log(formData);
+
         const head = {
             method: 'POST',
             headers: {
                 'x-api-key': 'c91f4c8b-f7c1-4cee-9461-2f27f43bc610',
-                'Content-Type' : 'application/json',
-            },
-            body: {
-                file:data, 
-                sub_id: this._subId
+                'Content-Type' : 'multipart/form-data',
             }
         }
         console.log(head);
-        const res = await this.getResource(`/upload`, head)
+        axios.defaults.headers.common['x-api-key'] = "c91f4c8b-f7c1-4cee-9461-2f27f43bc610" 
+        const res = await axios.post('https://api.thecatapi.com/v1/images/upload', formData, {headers: {'Content-Type':'multipart/form-data' }}) 
         return res;
     }
 
