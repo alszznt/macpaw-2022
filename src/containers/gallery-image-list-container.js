@@ -22,7 +22,6 @@ class GalleryImageListContainer extends Component {
         getGalletyList(5, 'All', 0, 'Random', 'None', true)
         getBreeds()
         getFavourite('', 'DESC', 0);
-        console.log('MOUNT');
     }
 
     render() {

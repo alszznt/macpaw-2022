@@ -11,14 +11,11 @@ const CatsPageSliderButtons = ({ arr, onCatImageSelected, selectedImage }) => {
         return (
             <div 
                 key = { data.id } 
-                // style = {{ backgroundImage: `url(${ data.url })` }}
                 className = {`cats-page-slider-buttons-item ${ isActive }`}
                 onClick = { () => onCatImageSelected(data) }
             />
         );
     });
-
-    console.log(arr);
 
     return(
         <div className = "cats-page-slider-buttons">

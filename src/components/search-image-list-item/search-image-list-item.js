@@ -5,8 +5,7 @@ import { ImageErrorIndicator } from '../error-indicators';
 import './search-image-list-item.css';
 
 const SearchImageListItem = ({ props, url }) => {
-
-    console.log(props.id);
+    
     return(
         <div className = "breeds-image-list-item">
             { !url ? <ImageErrorIndicator /> : <Image url = { url }/> }

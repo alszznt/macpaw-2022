@@ -67,8 +67,6 @@ class SearchImageListItemContainer extends Component {
             return <ImageErrorIndicator />
         }
 
-        console.log(url);
-
         return(
             <SearchImageListItem props = { props } url = { url } />
         );
