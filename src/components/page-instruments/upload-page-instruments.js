@@ -2,6 +2,8 @@ import React from 'react';
 
 import UploadPageCloseButton from '../upload-page-close-button';
 
+import UploadFileInput from '../upload-file-input';
+
 import './page-instruments.css';
 
 const UploadPageInstruments = () => {
@@ -12,6 +14,7 @@ const UploadPageInstruments = () => {
                     <div/>
                     <UploadPageCloseButton/>
                 </div>
+                <UploadFileInput />
             </div>
         </div>
     )

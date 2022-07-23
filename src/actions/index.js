@@ -454,3 +454,37 @@ const galleryPageReset = () => {
       type: 'GALLERY_PAGE_RESET'
     }
 };
+
+export const onFileChange = (file) => {
+    return{
+      type: 'ON_FILE_CHANGE',
+      payload: file
+    }
+};
+
+const fileRequested = () => {
+    return {
+      type: 'FETCH_FILE_DATA_REQUEST'
+    }
+};
+
+const fileLoaded = (data) => {
+    return {
+        type: 'FETCH_FILE_DATA_SUCCESS',
+        payload: data
+    };
+};
+
+const fileError = (error) => {
+    return {
+        type: 'FETCH_FILE_DATA_FAILURE',
+        payload: error
+    };
+};
+
+export const fetchFile = (service, dispatch) => (val) => {
+    dispatch(fileRequested(dispatch, val));
+    service.fetchFile(val)
+      .then((data) => dispatch(fileLoaded(data)))
+      .catch((err) => dispatch(fileError(err)));
+};

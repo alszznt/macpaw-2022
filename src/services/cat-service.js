@@ -7,8 +7,7 @@ export default class CatService {
         const res = await fetch(`${this._apiBase}${url}`, head);
     
         if (!res.ok) {
-          throw new Error(`Could not fetch ${url}` +
-            `, received ${res.status}`)
+          throw new Error(`${res.status}`)
         }
         return await res.json();
     };
@@ -150,6 +149,26 @@ export default class CatService {
         if ( type === 'Animated' ) fetchType = 'gif';
 
         const res = await this.getResource(`/images/search?limit=${ limit }&mime_types=${ fetchType }&page=${ page }&order=${ fetchOrder }${ isBreed }`, head)
+        return res;
+    }
+
+    fetchFile = async (file) => {
+        const data = new FormData()
+        data.append('file', file, file.name)
+        console.log(data);
+        const head = {
+            method: 'POST',
+            headers: {
+                'x-api-key': 'c91f4c8b-f7c1-4cee-9461-2f27f43bc610',
+                'Content-Type' : 'application/json',
+            },
+            body: {
+                file:data, 
+                sub_id: this._subId
+            }
+        }
+        console.log(head);
+        const res = await this.getResource(`/upload`, head)
         return res;
     }
 
