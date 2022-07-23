@@ -28,6 +28,8 @@ import GalleryImageListItem from './gallery-image-list-item-container';
 import UploadFileInput from './upload-file-input-container';
 import FileNameTag from './file-name-tag-container';
 import UploadPhotoButton from './upload-photo-button-container';
+import FaUploadIndicator from './fa-upload-indicator-container';
+import SucUploadIndicator from './suc-upload-indicator-container';
 
 export { 
     VotingImage,
@@ -59,5 +61,7 @@ export {
     GalleryImageListItem,
     UploadFileInput,
     FileNameTag,
-    UploadPhotoButton
+    UploadPhotoButton,
+    FaUploadIndicator,
+    SucUploadIndicator
 }

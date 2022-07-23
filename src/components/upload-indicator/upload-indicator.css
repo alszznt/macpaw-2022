@@ -1,3 +1,32 @@
-.upload-indicator-suc-icon{
-    
+
+.upload-indicator{
+    padding: 20px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 20px auto;
+    grid-gap: 0 10px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    align-items: center;
 }
+
+.upload-indicator-suc-icon{
+   width: 20px;
+   height: 20px;
+   background-image: url('../../assets/success-20.svg'); 
+}
+
+.upload-indicator-fail-icon{
+    width: 20px;
+    height: 20px;
+    background-image: url('../../assets/error-20.svg'); 
+ }
+
+ .upload-indicator-label{
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8C8C8C;
+ }

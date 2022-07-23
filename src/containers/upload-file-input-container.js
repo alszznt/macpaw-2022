@@ -42,7 +42,9 @@ class UploadFileInputContainer extends Component {
             IsDrag: false
         })
         let files = e.dataTransfer.files[0]
-        onFileChange(files)
+        if (files.type === 'image/jpeg'){
+            onFileChange(files)
+        }
     }
 
     onFileSelected = (event) => {

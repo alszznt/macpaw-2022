@@ -6,9 +6,11 @@ import { UploadPageInstruments } from '../page-instruments';
 
 const UploadPage = () => {
     return(
-        <div className = "pages-layout-apload-page">
-            <div />
-            <UploadPageInstruments />
+        <div className = "pages-layout-apload-overlay">
+            <div className = "pages-layout-apload-page">
+                <div />
+                <UploadPageInstruments />
+            </div>
         </div>
     )
 }

@@ -3,14 +3,23 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     z-index: 1;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.pages-layout-apload-overlay{
+    min-height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    background: rgba(29, 29, 29, 0.6);
 }
 
 .pages-layout-apload-page{
     min-height: 100vh;
     width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    position: fixed;
-    z-index: 2;
-    background: rgba(29, 29, 29, 0.6);
 }

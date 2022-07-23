@@ -2,12 +2,12 @@ import React from 'react';
 
 import UploadPageCloseButton from '../upload-page-close-button';
 
-import UploadIndicator from '../upload-indicator';
-
 import { 
     UploadFileInput, 
     FileNameTag,
-    UploadPhotoButton
+    UploadPhotoButton,
+    FaUploadIndicator,
+    SucUploadIndicator
 } from '../../containers';
 
 import './page-instruments.css';
@@ -20,10 +20,26 @@ const UploadPageInstruments = () => {
                     <div/>
                     <UploadPageCloseButton/>
                 </div>
+                <div className = "page-instruments-upload-title-container">
+                    <div className = "page-instruments-upload-title">
+                        Upload a .jpg or .png Cat Image
+                    </div>
+                    <div className = "page-instruments-upload-subtitle">
+                        Any uploads must comply with the 
+                        <a 
+                            href = "https://thecatapi.com/privacy" 
+                            className = "page-instruments-upload-link"
+                            target="_blank">
+                            <> upload guidelines </>
+                        </a>
+                        or face deletion.
+                    </div>
+                </div>
                 <UploadFileInput />
                 <FileNameTag />
                 <UploadPhotoButton />
-                {/* <UploadIndicator /> */}
+                <FaUploadIndicator />
+                <SucUploadIndicator/>
             </div>
         </div>
     )

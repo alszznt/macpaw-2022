@@ -9,7 +9,8 @@ const UploadFileInput = ({ onFileSelected, fetchFile, file }) => {
                 className = "upload-file-input-hidden"
                 type = "file" 
                 id = "file" 
-                onChange = { onFileSelected }/>
+                onChange = { onFileSelected }
+                accept=".png, .jpg"/>
                 
                 <div className = "upload-file-input-lebel">
                     <span className = "upload-file-input-lebel-bold">Drag here </span> 
