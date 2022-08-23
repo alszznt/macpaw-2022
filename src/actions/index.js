@@ -1,3 +1,16 @@
+
+export const toggleTheme = () => {
+    return {
+        type: 'TOGGLE_THEME',
+    };
+};
+
+export const toggleMenu = () => {
+    return {
+        type: 'TOGGLE_MENU',
+    };
+};
+
 const getDate = () => {
     let dt = new Date();
     if (dt.getMinutes() < 10) {

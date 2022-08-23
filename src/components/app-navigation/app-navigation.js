@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+import ThemeSwitcher from '../theme-switcher';
+
 import AppNavigationButton from '../app-navigation-button';
 
 import Logo from '../../assets/logo.svg';
@@ -19,6 +21,7 @@ const AppNavigation = () => {
                     <Link to = '/' className = "app-logo">
                         <img src = { Logo } alt = "app-logo" className = "app-logo"/>
                     </Link>
+                    <ThemeSwitcher/>
                 </div>
                 <div className = "app-navigation-content">
                     <div className = "app-navigation-title">Hi intern!</div>

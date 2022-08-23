@@ -1,9 +1,9 @@
-const updateGeneralData = (state, action) => {
+const generalData = (state, action) => {
 
     if (state === undefined) {
       return {
         isMenu: false,
-        isTheme: true
+        isTheme: false
       };
     }
   
@@ -12,19 +12,19 @@ const updateGeneralData = (state, action) => {
       case 'TOGGLE_MENU':
         return {
             ...state.updateGeneralData,
-            isMenu: !this.state.updateGeneralData.isMenu
+            isMenu: !state.generalData.isMenu
         };
 
         case 'TOGGLE_THEME':
         return {
             ...state.updateGeneralData,
-            isTheme: !this.state.updateGeneralData.isTheme
+            isTheme: !state.generalData.isTheme
         };
           
       default:
-        return state.updateGeneralData;
+        return state.generalData;
     }
   };
   
-  export default updateGeneralData;
+  export default generalData;
   

@@ -163,7 +163,6 @@ export default class CatService {
 
         let formData = new FormData();
         formData.append('file', file);
-        console.log(formData);
 
         const head = {
             method: 'POST',
@@ -172,7 +171,6 @@ export default class CatService {
                 'Content-Type' : 'multipart/form-data',
             }
         }
-        console.log(head);
         axios.defaults.headers.common['x-api-key'] = "c91f4c8b-f7c1-4cee-9461-2f27f43bc610" 
         const res = await axios.post('https://api.thecatapi.com/v1/images/upload', formData, {headers: {'Content-Type':'multipart/form-data' }}) 
         return res;

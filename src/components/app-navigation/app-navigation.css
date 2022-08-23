@@ -11,6 +11,11 @@
     margin: 0 auto;
 }
 
+.app-navigation-header{
+    display: grid;
+    grid-template-columns: auto max-content;
+}
+
 .app-logo{
     display: block; 
     width: max-content;
