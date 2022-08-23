@@ -1,3 +1,4 @@
+import updateGeneralData from './general-data';
 import updateActionsLog from './actions-log';
 import updateImagesData from './images-data';
 import updateVotingData from './voting-data';
@@ -10,6 +11,7 @@ import updateUploadData from './upload-data';
 
 const reducer = (state, action) => {
   return {
+    updateGeneralData: updateGeneralData(state, action),
     actionsLog: updateActionsLog(state, action),
     imagesData: updateImagesData(state, action),
     votingData: updateVotingData(state, action),
