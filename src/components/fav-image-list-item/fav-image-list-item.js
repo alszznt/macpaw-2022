@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './fav-image-list-item.css';
+import './fav-image-list-item.scss';
 
 const FavImageListItem = ({ props, deleteFavourite }) => {
 

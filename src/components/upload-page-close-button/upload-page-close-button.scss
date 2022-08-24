@@ -23,3 +23,12 @@
 .upload-page-close-button:hover > .upload-page-close-button-icon{
     background-image: url('../../assets/close-white-20.svg');
 }
+
+.dark{
+    .upload-page-close-button{
+        background: rgba(255, 255, 255, 0.05);
+    }
+    .upload-page-close-button:hover{
+        background: #FF868E;
+    }
+}

@@ -2,16 +2,15 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import ThemeSwitcher from '../theme-switcher';
+import { ThemeSwitcher } from '../../containers';
 
 import AppNavigationButton from '../app-navigation-button';
 
-import Logo from '../../assets/logo.svg';
 import Voting from '../../assets/voting.png';
 import Breeds from '../../assets/breeds.png'
 import Gallery from '../../assets/gallery.png'
 
-import './app-navigation.css';
+import './app-navigation.scss';
 
 const AppNavigation = () => {
     return(
@@ -19,7 +18,7 @@ const AppNavigation = () => {
             <div className = "app-navigation-content-container">
                 <div className = "app-navigation-header">
                     <Link to = '/' className = "app-logo">
-                        <img src = { Logo } alt = "app-logo" className = "app-logo"/>
+                        <div className = "app-logo"/>
                     </Link>
                     <ThemeSwitcher/>
                 </div>

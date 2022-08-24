@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './pages.css';
-
 import { UploadPageInstruments } from '../page-instruments';
 
 const UploadPage = () => {

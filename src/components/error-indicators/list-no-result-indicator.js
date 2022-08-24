@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './error-indicators.css';
+import './error-indicators.scss';
 
 const ListNoResultIndicator = () => {
     return(

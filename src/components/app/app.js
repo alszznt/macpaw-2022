@@ -17,10 +17,11 @@ import {
 
 import './app.css';
 
-const App = () => {
+const App = ({ theme }) => {
+  const isDark = theme ? 'dark' : ''
     return (
+      <div className = {`${isDark} app`}>
         <Routes>
-            
             <Route
                 path="/"
                 element={<HomePage />}
@@ -76,6 +77,7 @@ const App = () => {
             />
 
         </Routes>
+      </div> 
     )
 }
 

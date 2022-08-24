@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './prev-button.css';
+import './prev-button.scss';
 
 const PrevButton = ({ action }) => {
     return(

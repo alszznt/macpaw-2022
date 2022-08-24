@@ -82,3 +82,9 @@
 .votes-buttons-80:hover > .fav-icon-30-full-white{
     background-image: url('../../assets/fav-color-30.svg');
 }
+
+.dark{
+    .votes-buttons{
+        border: 4px solid #282828;
+    }
+}

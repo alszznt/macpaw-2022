@@ -91,3 +91,12 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
+
+.dark{
+    .image-loading-indicator{
+        background: rgba(29, 29, 29, 1);
+    }
+    .gallery-fetch-button-loading{
+        background: rgba(29, 29, 29, 1);
+    }
+}

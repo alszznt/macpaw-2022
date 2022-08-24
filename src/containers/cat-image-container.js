@@ -23,6 +23,15 @@ class CatImageContainer extends Component {
             )
         }
 
+        if (error) {
+            return (
+                <div className = "voting-image">
+                    <ImageErrorIndicator />
+                </div>
+            )
+        }
+        
+
         if (error) return null
 
         return(

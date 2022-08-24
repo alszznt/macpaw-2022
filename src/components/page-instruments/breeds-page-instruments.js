@@ -15,7 +15,7 @@ import {
     BreedsSwitchPageButtons
 } from '../../containers';
 
-import './page-instruments.css';
+import './page-instruments.scss';
 
 const BreedsPageInstruments = () => {
     return(

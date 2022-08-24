@@ -4,7 +4,7 @@ import { ImageErrorIndicator } from '../error-indicators';
 
 import { Link } from 'react-router-dom';
 
-import './breeds-image-list-item.css';
+import './breeds-image-list-item.scss';
 
 const BreedsImageListItem = ({ props }) => {
 

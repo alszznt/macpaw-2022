@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link, useLocation } from 'react-router-dom';
 
-import './app-navigation-button.css';
+import './app-navigation-button.scss';
 
 const AppNavigationButton = ({ image, label, link, bg }) => {
 

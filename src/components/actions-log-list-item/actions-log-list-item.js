@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './actions-log-list-item.css';
+import './actions-log-list-item.scss';
 
 const ActionsLogListItem = ({ data }) => {
 

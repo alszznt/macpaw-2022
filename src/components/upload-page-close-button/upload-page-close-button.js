@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
-import './upload-page-close-button.css';
+import './upload-page-close-button.scss';
 
 const UploadPageCloseButton = () => {
 

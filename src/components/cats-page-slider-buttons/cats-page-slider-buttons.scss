@@ -41,3 +41,15 @@
         opacity: 0.4; 
     }
 }
+
+.dark{
+    .cats-page-slider-buttons{
+        background-color: #282828;
+    }
+    .cats-page-slider-buttons-item{
+        background: rgba(255, 134, 142, 0.2);
+    }
+    .cats-page-slider-buttons-item-active{
+        background: #FF868E;
+    }
+}

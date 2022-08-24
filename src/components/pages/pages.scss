@@ -24,6 +24,12 @@
     grid-template-columns: 1fr 1fr;
 }
 
+.dark{
+    .pages-layout{
+        background: #1D1D1D;
+    }
+}
+
 /* @media (max-width:1023px) {
     .pages-layout{
         grid-template-columns: 1fr;

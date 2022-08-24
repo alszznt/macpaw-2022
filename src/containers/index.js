@@ -1,3 +1,5 @@
+import App from './app-container';
+import ThemeSwitcher from './theme-switcher-container';
 import VotingImage from './voting-image-container';
 import VotesButtons from './votes-buttons-container';
 import ActionsLogList from './actions-log-list-container';
@@ -30,8 +32,11 @@ import FileNameTag from './file-name-tag-container';
 import UploadPhotoButton from './upload-photo-button-container';
 import FaUploadIndicator from './fa-upload-indicator-container';
 import SucUploadIndicator from './suc-upload-indicator-container';
+import SearchValueIndicator from './search-value-indicator-container';
 
-export { 
+export {
+    App, 
+    ThemeSwitcher,
     VotingImage,
     VotesButtons,
     ActionsLogList,
@@ -63,5 +68,6 @@ export {
     FileNameTag,
     UploadPhotoButton,
     FaUploadIndicator,
-    SucUploadIndicator
+    SucUploadIndicator,
+    SearchValueIndicator
 }

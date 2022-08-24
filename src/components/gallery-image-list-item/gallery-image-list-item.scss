@@ -1,10 +1,10 @@
-.fav-image-list-item{
+.gallery-image-list-item{
     width: 100%;
     height: 100%;
     position: relative;
 }
 
-.fav-image-list-item-image{
+.gallery-image-list-item-image{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -14,13 +14,13 @@
     border-radius: 20px;
 }
 
-.fav-image-list-item-overlay{
+.gallery-image-list-item-overlay{
     display: none;
     opacity: 0;
     transition: 0.3;
 }
 
-.fav-image-list-item-icon-container{
+.gallery-image-list-item-icon-container{
     width: 40px;
     height: 40px;
     padding: 10px;
@@ -29,13 +29,7 @@
     border-radius: 10px;
 }
 
-.fav-color-20{
-    width: 20px;
-    height: 20px;
-    background-image: url('../../assets/fav-color-20.svg');
-}
-
-.fav-image-list-item:hover > .fav-image-list-item-overlay{
+.gallery-image-list-item:hover > .gallery-image-list-item-overlay{
     width: 100%;
     height: 100%;
     position: relative;
@@ -47,3 +41,20 @@
     opacity: 1;
 }
 
+.gallery-image-list-item-fill-icon{
+    width: 20px;
+    height: 20px;
+    background-image: url('../../assets/fav-color-20.svg');
+}
+
+.gallery-image-list-item-icon{
+    width: 20px;
+    height: 20px;
+    background-image: url('../../assets/fav-20.svg');
+}
+
+.dark{
+    .gallery-image-list-item-icon-container{
+        background: #282828;
+    }
+}

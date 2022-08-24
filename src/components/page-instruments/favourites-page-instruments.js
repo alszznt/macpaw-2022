@@ -10,7 +10,7 @@ import {
     FavImageListItem
 } from '../../containers';
 
-import './page-instruments.css';
+import './page-instruments.scss';
 
 const FavouritesPageInstruments = () => {
     return(

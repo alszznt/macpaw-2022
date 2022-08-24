@@ -10,7 +10,7 @@ import {
     SucUploadIndicator
 } from '../../containers';
 
-import './page-instruments.css';
+import './page-instruments.scss';
 
 const UploadPageInstruments = () => {
     return(

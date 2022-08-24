@@ -44,7 +44,7 @@ class GalleryLimitPickerContainer extends Component {
                 <BreedsPickerOpen 
                     onSelect = { (id) => this.onClose(id) } 
                     breeds = { this.state.limits }
-                    color = '#FFFFFF'
+                    color = 'darker'
                 />
             )
         }
@@ -55,7 +55,7 @@ class GalleryLimitPickerContainer extends Component {
                 <BreedsPicker 
                     click = { () => this.onOpen() } 
                     value = { this.props.limit }
-                    color = '#FFFFFF' 
+                    color = 'darker' 
                 /> 
             </>
         )

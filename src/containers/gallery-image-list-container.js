@@ -26,9 +26,9 @@ class GalleryImageListContainer extends Component {
 
     render() {
         
-        const { galleryList, loading, error, Item, favouriteData } = this.props;
+        const { galleryList, loading, error, Item } = this.props;
 
-        if ( loading || favouriteData.loading ){
+        if ( loading ){
             return <ElementLoadingIndicator />
         }
 
@@ -52,8 +52,8 @@ class GalleryImageListContainer extends Component {
 
 }
 
-const mapStateToProps = ({ galleryData: { galleryList, loading, error }, favouriteData }) => {
-    return { galleryList, loading, error, favouriteData };
+const mapStateToProps = ({ galleryData: { galleryList, loading, error } }) => {
+    return { galleryList, loading, error };
 };
 
 const mapDispatchToProps = (dispatch, { catService }) => {

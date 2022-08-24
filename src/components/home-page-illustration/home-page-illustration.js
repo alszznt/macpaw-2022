@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './home-page-illustration.css';
+import './home-page-illustration.scss';
 
 const HomePageIllustration = () => {
     return(

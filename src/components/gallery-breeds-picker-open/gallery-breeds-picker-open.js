@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GalleryBreedsPickerOpen = ({ breeds, onSelect, text = null, firstVal = null, color = '#F8F8F7', textEnd = null }) => {
+const GalleryBreedsPickerOpen = ({ breeds, onSelect, text = null, firstVal = null, color = 'lighter', textEnd = null }) => {
 
     const breedsList = breeds.map((data) => {
 
@@ -24,7 +24,7 @@ const GalleryBreedsPickerOpen = ({ breeds, onSelect, text = null, firstVal = nul
 
     return(
         <div className = "breeds-picker-open">
-            <div className = "breeds-picker-open-list" style = {{ backgroundColor: color }}>
+            <div className = {`${ color } breeds-picker-open-list`}>
                 { !firstVal ? null : <div className = "breeds-picker-open-list-item" onClick = { () => onSelect(firstVal, firstVal) }>{ firstVal }</div> }
                 { breedsList }
             </div>

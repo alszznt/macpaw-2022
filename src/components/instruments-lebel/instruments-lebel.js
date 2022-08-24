@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './instruments-lebel.css';
+import './instruments-lebel.scss';
 
 const InstrumentsLebel = ({ value, isActive = true }) => {
 

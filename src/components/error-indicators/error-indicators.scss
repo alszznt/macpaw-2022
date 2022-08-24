@@ -25,3 +25,9 @@
     background: #F8F8F7;
     border-radius: 10px;
 }
+
+.dark{
+    .list-no-result-indicator{
+        background: rgba(255, 255, 255, 0.05);
+    }
+}

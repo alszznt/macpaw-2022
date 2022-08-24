@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { Link, useNavigate } from 'react-router-dom';
 
-import './search-breeds-input.css';
+import './search-breeds-input.scss';
 
 const SearchBreedsInput = ({ value, onSearchChange, onSearch }) => {
 

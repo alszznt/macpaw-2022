@@ -22,3 +22,12 @@
 .back-button:hover > .back-icon-20{
     background-image: url('../../assets/back-white-20.svg');
 }
+
+.dark{
+    .back-button{
+        background: rgba(255, 134, 142, 0.2);
+    }
+    .back-button:hover{
+        background-color: #FF868E;
+    }
+}

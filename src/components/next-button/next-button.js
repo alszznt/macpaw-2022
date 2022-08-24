@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './next-button.css';
+import './next-button.scss';
 
 const NextButton  = ({ action }) => {
     return(

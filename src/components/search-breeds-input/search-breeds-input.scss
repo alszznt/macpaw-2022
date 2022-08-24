@@ -84,3 +84,23 @@
 .search-breeds-input-active > .search-breeds-input-value::placeholder{
     color: rgba(255, 134, 142, 1);
 }
+
+.dark{
+    .search-breeds-input{
+        background: rgba(255, 255, 255, 0.05);
+        border: 2px solid rgba(255, 255, 255, 0);
+    }
+    .search-breeds-input-icon-button{
+        background: rgba(255, 134, 142, 0.2);
+    }
+    .search-breeds-input-icon-button:hover{
+        background-color: #FF868E;
+    }
+    .search-breeds-input-value{
+        background: rgba(255, 255, 255, 0);
+        color: #fff;
+    }
+    .search-breeds-input:hover {
+        border: 2px solid rgba(255, 134, 142, 0.2);
+    }
+}

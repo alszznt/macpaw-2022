@@ -6,7 +6,7 @@ import BackButton from '../back-button';
 
 import { VotingImage, VotesButtons, ActionsLogList } from '../../containers';
 
-import './page-instruments.css';
+import './page-instruments.scss';
 
 const VotingPageInstruments = () => {
     return(

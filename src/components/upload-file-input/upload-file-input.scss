@@ -71,3 +71,24 @@
     background-size: cover;
     border-radius: 10px;
 }
+
+.dark{
+    .upload-file-input{
+        background: #FFFFFF;
+        border: 2px dashed rgba(255, 134, 142, 0.2);
+        background: rgba(255, 255, 255, 0.05);
+    }
+    .upload-file-input-lebel-bold{
+        color: #fff;
+    }
+    .upload-file-input-lebel-bold-active{
+        color: #fff;
+    }
+    .upload-file-input-icon{
+        background-image: url('../../assets/image-icon-dark.svg');
+    }
+    .upload-file-input-active{
+        background: rgba(255, 134, 142, 0.2);
+        border: 2px dashed #FF868E;
+    }
+}

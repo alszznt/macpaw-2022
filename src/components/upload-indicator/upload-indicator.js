@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './upload-indicator.css';
+import './upload-indicator.scss';
 
 const UploadIndicator = ({ value, icon }) => {
     const ic = icon ? 'upload-indicator-suc-icon' : 'upload-indicator-fail-icon';

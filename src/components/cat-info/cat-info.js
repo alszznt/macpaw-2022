@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './cat-info.css';
+import './cat-info.scss';
 
 const CatInfo = ({ data }) => {
 

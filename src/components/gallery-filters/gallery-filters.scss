@@ -34,3 +34,9 @@
     display: grid;
     grid-template-rows: auto 40px;
 }
+
+.dark{
+    .gallery-filters{
+        background: rgba(255, 255, 255, 0.05);
+    }
+}

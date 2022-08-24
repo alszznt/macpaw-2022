@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './upload-file-input.css';
+import './upload-file-input.scss';
 
 const UploadFileInputActive = () => {
     return(

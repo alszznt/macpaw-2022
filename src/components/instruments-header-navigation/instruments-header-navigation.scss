@@ -86,3 +86,45 @@
 .instruments-header-navigation-button-active:hover > .fav-icon-30{
     background-image: url('../../assets/fav-white-30.svg');
 }
+
+.dark{
+    .instruments-header-navigation-button{
+        background: rgba(255, 255, 255, 0.05);
+    }
+    .instruments-header-navigation-button:hover{
+        background: #FBE0DC;
+    }
+    .instruments-header-navigation-button:active{
+        background: #FF868E;
+    }
+    .instruments-header-navigation-button-active{
+        background-color: #FF868E;
+    }
+    .instruments-header-navigation-button-active:hover{
+        background-color: #FF868E;
+    }
+    
+    .instruments-header-navigation-button-active > .like-icon-30{
+        background-image: url('../../assets/like-white-30.svg');
+    }
+    
+    .instruments-header-navigation-button-active:hover > .like-icon-30{
+        background-image: url('../../assets/like-white-30.svg');
+    }
+    
+    .instruments-header-navigation-button-active > .dislike-icon-30{
+        background-image: url('../../assets/dislike-white-30.svg');
+    }
+    
+    .instruments-header-navigation-button-active:hover > .dislike-icon-30{
+        background-image: url('../../assets/dislike-white-30.svg');
+    }
+    
+    .instruments-header-navigation-button-active > .fav-icon-30{
+        background-image: url('../../assets/fav-white-30.svg');
+    }
+    
+    .instruments-header-navigation-button-active:hover > .fav-icon-30{
+        background-image: url('../../assets/fav-white-30.svg');
+    }
+}

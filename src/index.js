@@ -8,12 +8,11 @@ import CatService from './services/cat-service';
 
 import store from './store';
 
-import App from './components/app';
+import { App } from './containers';
 
 const catService = new CatService();
 
 const root = createRoot(document.getElementById("root"));
-
 root.render(
     <Provider store = { store }>
         <CatServiceProvider value={ catService }>

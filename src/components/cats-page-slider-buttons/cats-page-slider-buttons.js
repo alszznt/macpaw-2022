@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './cats-page-slider-buttons.css';
+import './cats-page-slider-buttons.scss';
 
 const CatsPageSliderButtons = ({ arr, onCatImageSelected, selectedImage }) => {
 

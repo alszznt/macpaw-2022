@@ -43,7 +43,7 @@ class GalleryTypePickerContainer extends Component {
                 <BreedsPickerOpen 
                     onSelect = { (id) => this.onClose(id) } 
                     breeds = { this.state.types }
-                    color = '#FFFFFF'
+                    color = 'darker'
                 />
             )
         }
@@ -54,7 +54,7 @@ class GalleryTypePickerContainer extends Component {
                 <BreedsPicker 
                     click = { () => this.onOpen() } 
                     value = { this.props.type }
-                    color = '#FFFFFF' 
+                    color = 'darker' 
                 />
             </>
         )

@@ -2,7 +2,7 @@ import React from 'react';
 
 import './breeds-picker-open.css';
 
-const BreedsPickerOpen = ({ breeds, onSelect, text = null, firstVal = null, color = '#F8F8F7', textEnd = null }) => {
+const BreedsPickerOpen = ({ breeds, onSelect, text = null, firstVal = null, color = 'lighter', textEnd = null }) => {
 
     const breedsList = breeds.map((data) => {
 
@@ -26,7 +26,7 @@ const BreedsPickerOpen = ({ breeds, onSelect, text = null, firstVal = null, colo
 
     return(
         <div className = "breeds-picker-open">
-            <div className = "breeds-picker-open-list" style = {{ backgroundColor: color }}>
+            <div className = {` ${ color } breeds-picker-open-list`}>
                 { !firstVal ? null : <div className = "breeds-picker-open-list-item" onClick = { () => onSelect(firstVal) }>{ firstVal }</div> }
                 { breedsList }
             </div>

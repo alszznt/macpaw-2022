@@ -71,3 +71,17 @@
     line-height: 23px;
     color: #8C8C8C;
 }
+
+.dark{
+    .cat-info-name{
+        background-color: #282828;
+        color: #fff;
+    }
+    .cat-info-general-conatiner{
+        background-color: #282828;
+        border: 2px solid rgba(255, 134, 142, 0.2)
+    }
+    .cat-info-bolt-text{
+        color: rgba(255, 255, 255, 1);
+    }
+}

@@ -52,3 +52,12 @@
 .prev-button:active > .prev-button-icon{
     background-image: url('../../assets/fa6-solid_angle-left-2.svg');
 }
+
+.dark{
+    .prev-button{
+        background: #333333;
+    }
+    .prev-button:hover{
+        background: #FBE0DC;
+    }
+}

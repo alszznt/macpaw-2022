@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './loading-indicators.css';
+import './loading-indicators.scss';
 
 const VotesButtonsLoadingIndicator = () => {
     return(

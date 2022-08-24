@@ -1,23 +1,6 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux';
-import { compose } from '../../utils';
-
-import { toggleTheme } from '../../actions';
+import React from 'react'
 
 import './theme-switcher.scss';
-
-class ThemeSwitcherContainer extends Component {
-
-    render() {
-
-        const { toggleTheme, isTheme } = this.props;
-
-        return (
-            <ThemeSwitcher toggleTheme = { toggleTheme } isTheme = { isTheme } />
-        )
-    }
-
-}
 
 const ThemeSwitcher = ({ toggleTheme, isTheme }) => {
     const isDark = isTheme ? 'dark' : '';
@@ -39,16 +22,4 @@ const ThemeSwitcher = ({ toggleTheme, isTheme }) => {
     )
 }
 
-const mapStateToProps = ({ generalData: {isTheme} }) => {
-    return { isTheme };
-};
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        toggleTheme: () => dispatch(toggleTheme())
-    };
-};
-
-export default compose(
-    connect(mapStateToProps, mapDispatchToProps)
-)(ThemeSwitcherContainer);
+export default ThemeSwitcher;

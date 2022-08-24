@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 
 import { CatsPageSliderButtons, CatImage, CatInfo } from '../../containers';
 
-import './page-instruments.css';
+import './page-instruments.scss';
 
 const CatsPageInstruments = () => {
 

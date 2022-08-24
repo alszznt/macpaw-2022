@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link, useLocation } from 'react-router-dom';
 
-import './instruments-header-navigation.css';
+import './instruments-header-navigation.scss';
 
 const InstrumentsHeaderNavigation = () => {
 

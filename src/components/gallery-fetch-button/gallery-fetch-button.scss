@@ -22,3 +22,12 @@
 .gallery-fetch-button:hover > .gallery-fetch-button-icon{
     background-image: url('../../assets/update-white-20.svg');
 }
+
+.dark{
+    .gallery-fetch-button{
+        background: #1D1D1D;
+    }
+    .gallery-fetch-button:hover{
+        background: #FF868E;
+    }
+}

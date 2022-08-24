@@ -1,26 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-import { connect } from 'react-redux';
-import { compose } from '../../utils';
-
-import './search-value-indicator.css';
-
-class SearchValueIndicatorContainer extends Component {
-
-    render() {
-
-        const { searchVal, loading } = this.props;
-
-        if ( loading ){
-            return null
-        }
-
-        return (
-            <SearchValueIndicator label = { searchVal } />
-        )
-    }
-
-}
+import './search-value-indicator.scss';
 
 const SearchValueIndicator = ({ label }) => {
     return(
@@ -30,10 +10,4 @@ const SearchValueIndicator = ({ label }) => {
     )
 }
 
-const mapStateToProps = ({ searchData: { searchVal, loading } }) => {
-    return { searchVal, loading };
-};
-
-export default compose(
-    connect(mapStateToProps)
-)(SearchValueIndicatorContainer);
+export default SearchValueIndicator;

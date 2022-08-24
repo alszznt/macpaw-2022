@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './gallery-fetch-button.css';
+import './gallery-fetch-button.scss';
 
 const GalleryFetchButton = ({ getList, data: { limit, type, page, order, breed } }) => {
     return(

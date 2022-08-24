@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './upload-file-input.css';
+import './upload-file-input.scss';
 
-const UploadFileInput = ({ onFileSelected, fetchFile, file }) => {
+const UploadFileInput = ({ onFileSelected }) => {
     return(
         <div className = "upload-file-input">
             <input 

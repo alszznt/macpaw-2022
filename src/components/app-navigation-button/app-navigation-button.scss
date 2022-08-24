@@ -82,3 +82,14 @@
     background-color: #FF868E;
     color: #FFFFFF;
 }
+
+.dark{
+    .app-navigation-button-label{
+        background: rgba(255, 255, 255, 0.1);
+    }
+    .active{
+        .app-navigation-button-label{
+            background: #FF868E;
+        } 
+    }
+}

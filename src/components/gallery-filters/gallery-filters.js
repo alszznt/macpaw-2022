@@ -8,7 +8,7 @@ import {
     GalleryFetchButton
 } from '../../containers';
 
-import './gallery-filters.css';
+import './gallery-filters.scss';
 
 const GalleryFilters = () => {
     return (

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import './link-to-upload.css';
+import './link-to-upload.scss';
 
 const LinkToUpload = () => {
     return(

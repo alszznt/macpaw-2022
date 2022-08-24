@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
-import './back-button.css';
+import './back-button.scss';
 
 const BackButton = () => {
 

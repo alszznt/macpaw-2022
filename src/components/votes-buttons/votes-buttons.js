@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './votes-buttons.css';
+import './votes-buttons.scss';
 
 const VotesButtons = ({ id, favouriteList, voteUp, voteDown, addFavourite, deleteFavourite }) => {
 

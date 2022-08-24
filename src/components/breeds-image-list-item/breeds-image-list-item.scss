@@ -37,16 +37,31 @@
 }
 
 .breeds-image-list-item-name{
-    width: 100%;
-    height: max-content;
-    padding: 5px;
-    background: #FFFFFF;
-    border-radius: 10px;
-    font-family: 'Jost', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    color: #FF868E;
+    display: none;
+}
+
+.breeds-image-list-item-overlay:hover > {
+    .breeds-image-list-item-name{
+        display: grid;
+        width: 100%;
+        height: max-content;
+        padding: 5px;
+        background: #fff;
+        border-radius: 10px;
+        font-family: 'Jost', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #FF868E;
+    }
+}
+
+.dark{
+    .breeds-image-list-item-overlay:hover > {
+        .breeds-image-list-item-name{
+            background: #282828;
+        }
+    }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './gallery-image-list-item.css';
+import './gallery-image-list-item.scss';
 
 const GalleryImageListItem = ({ props, deleteFavourite, addFavourite, fav }) => {
 

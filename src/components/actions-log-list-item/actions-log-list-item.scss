@@ -52,3 +52,17 @@
     width: 20px;
     height: 20px;
 }
+
+.dark{
+    .actions-log-list-item{
+        background: rgba(255, 255, 255, 0.05);
+    }
+    .actions-log-list-item-label-bolt{
+        color: rgba(255, 255, 255, 1);
+    }
+    .actions-log-list-item-date{
+        background: #1D1D1D;
+        color: #fff;
+    }
+}
+

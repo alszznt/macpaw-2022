@@ -55,3 +55,12 @@
     background-image: url('../../assets/fa6-solid_angle-left-2.svg');
     transform: rotate(-180deg);
 }
+
+.dark{
+    .next-button{
+        background: #333333;
+    }
+    .next-button:hover{
+        background: #FBE0DC;
+    }
+}

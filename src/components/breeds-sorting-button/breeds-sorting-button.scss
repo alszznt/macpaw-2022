@@ -40,3 +40,13 @@
 .breeds-sorting-button:hover > .breeds-sorting-az-button-icon{
     background-image: url('../../assets/sort-revert-color-20.svg');
 }
+
+.dark{
+    .breeds-sorting-button{
+        background: #333333;
+        border: 2px solid #333333;
+    }
+    .breeds-sorting-button:hover{
+        border: 2px solid rgba(255, 134, 142, 0.2)
+    }
+}

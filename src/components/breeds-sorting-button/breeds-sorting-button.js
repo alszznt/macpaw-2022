@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './breeds-sorting-button.css';
+import './breeds-sorting-button.scss';
 
 const BreedsSortingButton = ({ switchSort, name }) => {
     return(

@@ -9,7 +9,7 @@ import {
     VotesImageList
 } from '../../containers';
 
-import './page-instruments.css';
+import './page-instruments.scss';
 
 const LikesPageInstruments = () => {
     return(

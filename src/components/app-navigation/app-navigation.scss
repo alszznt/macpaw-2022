@@ -18,7 +18,8 @@
 
 .app-logo{
     display: block; 
-    width: max-content;
+    background-image: url('../../assets/logo.svg');
+    width: 106px;
     height: 24px;
     margin: 0;
 }
@@ -61,4 +62,19 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0 16px;
     margin: 20px 0 0;
+}
+
+.dark{
+    .app-logo{
+        background-image: url('../../assets/Logo-dark.svg');
+    }
+    .app-navigation-title{
+        color: #FFFFFF;
+    }
+    .app-navigation-subtitle{
+        color: #8C8C8C;
+    }
+    .app-navigation-buttons-title{
+        color: #FFFFFF;
+    }
 }

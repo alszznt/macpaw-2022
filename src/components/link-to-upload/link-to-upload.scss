@@ -43,3 +43,12 @@
 .link-to-upload:hover > .link-to-upload-icon{
     background-image: url('../../assets/upload-white-16.svg');
 }
+
+.dark{
+    .link-to-upload{
+        background: rgba(255, 134, 142, 0.2);
+    }
+    .link-to-upload:hover {
+        background: #FF868E;
+    }
+}
