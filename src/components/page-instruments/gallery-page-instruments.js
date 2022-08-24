@@ -22,15 +22,17 @@ const GalleryPageInstruments = () => {
             <InstrumentsHeader />
             <div className = "page-instruments-content">
                 <div className = "page-instruments-content-container">
-                    <div className = "page-instruments-gallery-header">
-                        <BackButton />
-                        <InstrumentsLebel value = 'GALLERY' />
-                        <LinkToUpload />
+                    <div>
+                        <div className = "page-instruments-gallery-header">
+                            <BackButton />
+                            <InstrumentsLebel value = 'GALLERY' />
+                            <LinkToUpload />
+                        </div>
+                        <GalleryFilters />
+                        <GalleryImageList Item = { GalleryImageListItem }/>
                     </div>
-                    <GalleryFilters />
-                    <GalleryImageList Item = { GalleryImageListItem }/>
-                </div>
                 <GallerySwitchPageButtons />
+                </div>
             </div>
         </div>
     )

@@ -1,0 +1,44 @@
+.menu-open-button{
+    display: none;
+}
+
+@media (max-width:1023px) {
+    .menu-open-button{
+        display: grid;
+        width: 60px;
+        height: 60px;
+        padding: 14px;
+        background: #FFFFFF;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    .menu-open-icon{
+        width: 32px;
+        height: 32px;
+        background-image: url('../../assets/menu.svg');
+        transition: 0.3s;
+    }
+    
+    .menu-open-button:hover{
+        background: #FF868E;
+    }
+    
+    .menu-open-button:hover > .menu-open-icon{
+        background-image: url('../../assets/menu-white.svg');
+    }
+    
+    .dark{
+        .menu-open-button{
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .menu-open-button:hover{
+            background: #FF868E;
+        }
+    }
+}
+
+
+
+

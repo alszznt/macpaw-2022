@@ -12,7 +12,8 @@ import {
     FavouritesPage ,
     CatsPage,
     SearchPage,
-    UploadPage
+    UploadPage,
+    MenuPage
 } from '../pages';
 
 import './app.css';
@@ -25,6 +26,11 @@ const App = ({ theme }) => {
             <Route
                 path="/"
                 element={<HomePage />}
+            />
+
+            <Route
+                path="/menu"
+                element={<MenuPage />}
             />
 
             <Route

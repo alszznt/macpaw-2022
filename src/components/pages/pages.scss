@@ -30,8 +30,24 @@
     }
 }
 
-/* @media (max-width:1023px) {
+@media (max-width:1023px) {
     .pages-layout{
         grid-template-columns: 1fr;
     }
-} */
+
+    .home-page-mobile > div:nth-child(2n) {
+        display: none;
+    }
+
+    .home-page-mobile > div:nth-child(2n - 1) {
+        display: grid !important;
+    }
+
+    .pages-layout > div:nth-child(2n-1) {
+        display: none;
+    }
+    .pages-layout{
+        max-width: 680px;
+        margin: 0 auto;
+    }
+}

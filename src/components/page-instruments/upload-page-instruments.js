@@ -1,6 +1,6 @@
 import React from 'react';
 
-import UploadPageCloseButton from '../upload-page-close-button';
+import CloseButton from '../close-button';
 
 import { 
     UploadFileInput, 
@@ -18,7 +18,7 @@ const UploadPageInstruments = () => {
             <div className = "page-instruments-upload-content">
                 <div className = "page-instruments-upload-header">
                     <div/>
-                    <UploadPageCloseButton/>
+                    <CloseButton/>
                 </div>
                 <div className = "page-instruments-upload-title-container">
                     <div className = "page-instruments-upload-title">

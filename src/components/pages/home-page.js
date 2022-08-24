@@ -7,8 +7,8 @@ import './pages.scss';
 
 const HomePage = () => {
     return(
-        <div className = "pages-layout">
-            <AppNavigation />
+        <div className = "pages-layout home-page-mobile">
+            <AppNavigation showTitle = { true } />
             <HomePageIllustration />
         </div>
     )

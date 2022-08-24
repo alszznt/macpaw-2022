@@ -28,6 +28,10 @@
     margin: 80px 0 0;
 }
 
+.distance-dec{
+    margin: 80px 0 0;
+}
+
 .app-navigation-title{
     font-family: 'Jost', sans-serif;
     font-size: 44px;
@@ -64,6 +68,10 @@
     margin: 20px 0 0;
 }
 
+.app-navigation-content-container-mobile{
+    max-width: 100%;
+}
+
 .dark{
     .app-logo{
         background-image: url('../../assets/Logo-dark.svg');
@@ -76,5 +84,47 @@
     }
     .app-navigation-buttons-title{
         color: #FFFFFF;
+    }
+}
+
+.app-navigation-text{
+    display: grid;
+}
+
+.app-navigation-header-mobile{
+    display: none;
+}
+
+.app-navigation-text-mobile{
+    display: none;
+}
+
+.app-navigation-header-home{
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1023px) {
+    .app-navigation-text{
+        display: none;
+    } 
+    .app-navigation-header{
+        display: none;
+    }
+    .app-navigation-header-mobile{
+        display: grid;
+    }
+    .app-navigation-text-mobile{
+        display: grid;
+    }
+    .distance-dec{
+        margin: 8px 0 0;
+    }
+    .app-navigation-content-container{
+        max-width: 100%;
+    }
+    .app-navigation-content-container-mobile{
+        max-width: 450px;
+        margin: 0 auto;
     }
 }

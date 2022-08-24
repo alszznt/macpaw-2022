@@ -8,6 +8,7 @@ import FavouritesPage from './favourites-page';
 import CatsPage from './cats-page';
 import SearchPage from './search-page';
 import UploadPage from './upload-page';
+import MenuPage from './menu-page';
 
 export {
     HomePage,
@@ -19,5 +20,6 @@ export {
     FavouritesPage,
     CatsPage,
     SearchPage,
-    UploadPage
+    UploadPage,
+    MenuPage
 }

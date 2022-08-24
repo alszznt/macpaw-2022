@@ -1,5 +1,5 @@
 
-.upload-page-close-button{
+.close-button{
     width: 40px;
     height: 40px;
     padding: 10px;
@@ -9,26 +9,41 @@
     transition: 0.3s;
 }
 
-.upload-page-close-button-icon{
+.close-button-icon{
     width: 20px;
     height: 20px;
     background-image: url('../../assets/close-20.svg');
     transition: 0.3s;
 }
 
-.upload-page-close-button:hover{
+.close-button:hover{
     background: #FF868E;
 }
 
-.upload-page-close-button:hover > .upload-page-close-button-icon{
+.close-button:hover > .close-button-icon{
     background-image: url('../../assets/close-white-20.svg');
 }
 
 .dark{
-    .upload-page-close-button{
+    .close-button{
         background: rgba(255, 255, 255, 0.05);
     }
-    .upload-page-close-button:hover{
+    .close-button:hover{
         background: #FF868E;
+    }
+}
+
+.close-button-big{
+    width: 60px;
+    height: 60px;
+    padding: 14px;
+    border-radius: 20px;
+}
+
+.close-button-big{
+    .close-button-icon{
+        width: 32px;
+        height: 32px;
+        background-size: cover;
     }
 }
