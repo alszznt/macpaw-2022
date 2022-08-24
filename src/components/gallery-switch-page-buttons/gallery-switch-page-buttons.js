@@ -24,6 +24,8 @@ class GallerySwitchPageButtonsContainer extends Component {
 
         if(loading || favouriteData.loading )return null
 
+        if(galleryData.galleryList.length === 0 )return null
+
         return (
             <GallerySwitchPageButtons
                 page = { galleryData.page }
