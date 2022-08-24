@@ -17,3 +17,26 @@
     grid-column: auto /span 1;
     grid-row: auto /span 2;
 }
+
+@media (max-width: 479px) {
+
+.image-list {
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 300px;
+}
+    
+.image-list > div:nth-child(10n - 6),
+.image-list > div:nth-child(10n - 1) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.image-list > div:nth-child(10n - 9),
+.image-list > div:nth-child(10n - 2) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+}

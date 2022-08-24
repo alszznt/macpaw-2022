@@ -4,7 +4,7 @@
     min-height: 100vh;
     padding: 30px;
     display: grid;
-    grid-template-rows: 60px auto;
+    grid-template-rows: max-content auto;
     grid-gap: 10px 0;
 }
 
@@ -31,9 +31,21 @@
 .page-instruments-breeds-header{
     width: 100%;
     display: grid;
-    grid-template-columns: max-content max-content auto max-content max-content max-content;
+    grid-template-columns: max-content auto;
     grid-gap: 0 10px;
     margin: 0 0 20px 0;
+}
+
+.page-instruments-breeds-header-location{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-gap: 0 10px;
+}
+
+.page-instruments-breeds-header-filters{
+    display: grid;
+    grid-template-columns: auto max-content max-content max-content;
+    grid-gap: 0 10px;
 }
 
 .page-instruments-breeds-content{
@@ -46,11 +58,17 @@
 }
 
 .page-instruments-gallery-header{
-    width: width;
+    width: 100%;
     display: grid;
-    grid-template-columns: max-content auto max-content;
+    grid-template-columns: auto max-content;
     grid-gap: 0 10px;
     margin: 0 0 20px 0;
+}
+
+.page-instruments-gallery-header-location{
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-gap: 0 10px;
 }
 
 .page-instruments-upload-layout{
@@ -119,5 +137,66 @@
     }
     .page-instruments-upload-title{
         color: #fff;
+    }
+}
+
+@media (max-width: 1023px) {
+    .page-instruments-upload-layout{
+        padding: 0;
+        
+    }
+    .page-instruments-upload-content{
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 479px) {
+    .page-instruments-layout{
+        padding: 20px;
+    }
+    .page-instruments-breeds-header{
+        grid-gap: 10px 0;
+        grid-template-columns: 1fr;
+    }
+    .page-instruments-breeds-header-filters{
+        grid-template-columns: auto max-content max-content;
+        grid-gap: 10px;
+    }
+    .page-instruments-breeds-header-filters > div:nth-child(4n-3){
+        grid-column: span 3;
+    }
+    .page-instruments-gallery-header{
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+    
+    .page-instruments-gallery-header-location{
+        grid-template-columns: max-content max-content;
+        grid-gap: 10px;
+    }
+
+    .page-instruments-gallery-header > div:nth-child(2n){
+        grid-column: span 2;
+    }
+
+    .page-instruments-upload-title{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 29px;
+    }
+    .page-instruments-upload-subtitle{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .upload-file-input-lebel{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 29px;
+        text-align: center;
+        width: 80%;
     }
 }

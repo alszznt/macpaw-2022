@@ -93,3 +93,13 @@
         } 
     }
 }
+
+@media (max-width:479px) {
+    .app-navigation-button{
+        height: max-content;
+        width: 100%;
+    }
+    .app-navigation-button-background{
+        display: none;
+    }
+}

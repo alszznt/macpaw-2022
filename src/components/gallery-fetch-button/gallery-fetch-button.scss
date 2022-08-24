@@ -31,3 +31,12 @@
         background: #FF868E;
     }
 }
+
+@media (max-width: 479px) {
+    .gallery-fetch-button{
+        width: 100%;
+    }
+    .gallery-fetch-button-icon{
+        margin: 0 auto;
+    }
+}

@@ -24,8 +24,10 @@ const GalleryPageInstruments = () => {
                 <div className = "page-instruments-content-container">
                     <div>
                         <div className = "page-instruments-gallery-header">
-                            <BackButton />
-                            <InstrumentsLebel value = 'GALLERY' />
+                            <div className = "page-instruments-gallery-header-location">
+                                <BackButton />
+                                <InstrumentsLebel value = 'GALLERY' />
+                            </div>
                             <LinkToUpload />
                         </div>
                         <GalleryFilters />

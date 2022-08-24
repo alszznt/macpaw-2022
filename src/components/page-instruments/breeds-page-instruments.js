@@ -23,12 +23,16 @@ const BreedsPageInstruments = () => {
             <InstrumentsHeader />
             <div className = "page-instruments-breeds-content">
                 <div className = "page-instruments-breeds-header">
-                    <BackButton />
-                    <InstrumentsLebel value = 'BREEDS' />
-                    <BreedsPicker />
-                    <BreedsLimitPicker />
-                    <BreedsSortingZAButton />
-                    <BreedsSortingAZButton />
+                    <div className = "page-instruments-breeds-header-location">
+                        <BackButton />
+                        <InstrumentsLebel value = 'BREEDS' />
+                    </div>
+                    <div className = "page-instruments-breeds-header-filters">
+                        <BreedsPicker />
+                        <BreedsLimitPicker />
+                        <BreedsSortingZAButton />
+                        <BreedsSortingAZButton />
+                    </div>
                 </div>
                 <BreedsImageList Item = { BreedsImageListItem } />
                 <BreedsSwitchPageButtons />

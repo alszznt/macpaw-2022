@@ -1,0 +1,27 @@
+.instruments-header{
+    display: grid;
+    grid-template-columns: auto 200px;
+    grid-gap: 0 10px;
+}
+
+@media (max-width:1023px) {
+    .instruments-header{
+        display: grid;
+        grid-template-columns: max-content auto max-content;
+        grid-gap: 0 10px;
+    }
+}
+
+@media (max-width: 479px) {
+    .instruments-header{
+        height: max-content;
+        display: grid;
+        grid-template-columns: auto min-content;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .instruments-header > form:nth-child(3n-1){
+        order: 1;
+        grid-column: span 2;
+    }
+}

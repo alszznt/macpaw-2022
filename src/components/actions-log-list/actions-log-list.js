@@ -2,7 +2,7 @@ import React from 'react';
 
 import ActionsLogListItem from '../actions-log-list-item';
 
-import './actions-log-list.css';
+import './actions-log-list.scss';
 
 const ActionsLogList = ({ logs }) => {
 

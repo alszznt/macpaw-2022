@@ -40,3 +40,15 @@
         background: rgba(255, 255, 255, 0.05);
     }
 }
+
+@media (max-width: 479px) {
+    .gallery-filters{
+        grid-gap: 10px 10px;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 10px;
+    }
+    .gallery-filters-filt-with-button{
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+}

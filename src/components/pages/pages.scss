@@ -50,4 +50,25 @@
         max-width: 680px;
         margin: 0 auto;
     }
+
+    .pages-layout-apload-page > div:nth-child(2n-1){
+        display: none;
+    }
+
+    .pages-layout-apload-overlay{
+        padding: 0;
+    }
+    
+    .pages-layout-apload-page{
+        min-height: 100vh;
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:479px) {
+    
 }

@@ -66,3 +66,17 @@
     }
 }
 
+@media (max-width: 479px) {
+    .actions-log-list-item-label{
+        order: 1;
+        grid-column: span 2;
+    }
+    .actions-log-list-item{
+        grid-template-columns: auto min-content;
+        grid-gap: 10px;
+    }
+    .actions-log-list-item-date{
+        width: max-content;
+    }
+}
+

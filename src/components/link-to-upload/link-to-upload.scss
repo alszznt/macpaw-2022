@@ -52,3 +52,11 @@
         background: #FF868E;
     }
 }
+
+@media (max-width: 479px) {
+    .link-to-upload{
+        width: 100%;
+        grid-template-columns: 16px max-content;
+        justify-content: center;
+    }
+}

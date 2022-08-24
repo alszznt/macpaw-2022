@@ -5,7 +5,7 @@ import MenuOpenButton from '../menu-open-button';
 
 import { SearchBreedsInput } from '../../containers';
 
-import './instruments-header.css';
+import './instruments-header.scss';
 
 const InstrumentsHeader = () => {
     return(

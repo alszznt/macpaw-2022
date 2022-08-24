@@ -92,3 +92,10 @@
         border: 2px dashed #FF868E;
     }
 }
+
+@media (max-width:479px) {
+    .upload-file-input{
+        height: 165px;
+        min-height: 165px;
+    }
+}

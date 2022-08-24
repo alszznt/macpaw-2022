@@ -100,3 +100,12 @@
         background: rgba(29, 29, 29, 1);
     }
 }
+
+@media (max-width: 479px) {
+    .gallery-fetch-button-loading{
+        width: 100%;
+    }
+    .gallery-fetch-button-icon-loading{
+        margin: 0 auto;
+    }
+}
