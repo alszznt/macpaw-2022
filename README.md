@@ -10,6 +10,8 @@ In the project directory in the src folder you can find the parts responsible fo
 
 by clicking on the [link](https://62dc105c0a983d26961f49b1--celadon-alpaca-e0a436.netlify.app) you will see a public demo version of the project
 
+[demo](https://brilliant-duckanoo-d9b151.netlify.app) of the new version of a site with extra tasks completed after the deadline
+
 ### Local project run
 
 `npm start` starts local project on port 3000
